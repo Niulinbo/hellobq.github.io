@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue 全局API," />
 
 
 
@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="前端开发者的博客，记录我的学习历程">
-<meta name="keywords" content="前端博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="It&#39;s not easy">
-<meta property="og:url" content="http://yoursite.com/tags/原生js获取DOM节点/index.html">
+<meta name="description" content="全局 API不在构造器内部、挂载在构造函数 Vue 下的 API，也就是 Vue 的静态方法。 Vue.directive自定义指令。实现对普通 DOM 元素底层操作。语法：Vue.directive({String}id, {funciton|object}defination)、`directives分类：  全局自定义指令 可用于所有 Vue 实例 局部自定义指令 仅仅作用于当前组件">
+<meta name="keywords" content="Vue 全局API">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue 全局API">
+<meta property="og:url" content="http://yoursite.com/2018/06/07/Vue-全局API/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="前端开发者的博客，记录我的学习历程">
+<meta property="og:description" content="全局 API不在构造器内部、挂载在构造函数 Vue 下的 API，也就是 Vue 的静态方法。 Vue.directive自定义指令。实现对普通 DOM 元素底层操作。语法：Vue.directive({String}id, {funciton|object}defination)、`directives分类：  全局自定义指令 可用于所有 Vue 实例 局部自定义指令 仅仅作用于当前组件">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/06/07/Vue-全局API/Vue.extend.png">
+<meta property="og:updated_time" content="2018-06-08T14:30:41.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="It&#39;s not easy">
-<meta name="twitter:description" content="前端开发者的博客，记录我的学习历程">
+<meta name="twitter:title" content="Vue 全局API">
+<meta name="twitter:description" content="全局 API不在构造器内部、挂载在构造函数 Vue 下的 API，也就是 Vue 的静态方法。 Vue.directive自定义指令。实现对普通 DOM 元素底层操作。语法：Vue.directive({String}id, {funciton|object}defination)、`directives分类：  全局自定义指令 可用于所有 Vue 实例 局部自定义指令 仅仅作用于当前组件">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/07/Vue-全局API/Vue.extend.png">
 
 
 
@@ -119,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/原生js获取DOM节点/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/07/Vue-全局API/"/>
 
 
 
 
 
-  <title>标签: 原生js获取DOM节点 | It's not easy</title>
+  <title>Vue 全局API | It's not easy</title>
   
 
 
@@ -229,7 +232,7 @@ $(function() {
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -357,54 +360,237 @@ $(function() {
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>原生js获取DOM节点<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/07/Vue-全局API/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="It's not easy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="It's not easy">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/05/09/原生js获取DOM节点/" itemprop="url">
-              
-                <span itemprop="name">原生js获取DOM节点</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Vue 全局API</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-09T00:00:00+08:00"
-              content="2018-05-09" >
-          05-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-07T16:22:18+08:00">
+                2018-06-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/07/Vue-全局API/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/06/07/Vue-全局API/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/06/07/Vue-全局API/" class="leancloud_visitors" data-flag-title="Vue 全局API">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h3><p>不在构造器内部、挂载在构造函数 <code>Vue</code> 下的 <code>API</code>，也就是 <code>Vue</code> 的静态方法。</p>
+<h3 id="Vue-directive"><a href="#Vue-directive" class="headerlink" title="Vue.directive"></a>Vue.directive</h3><p>自定义指令。实现对普通 <code>DOM</code> 元素底层操作。<br>语法：<code>Vue.directive({String}id, {funciton|object}defination)</code>、`directives<br>分类：</p>
+<ul>
+<li>全局自定义指令 可用于所有 <code>Vue</code> 实例</li>
+<li>局部自定义指令 仅仅作用于当前组件</li>
+</ul>
+<a id="more"></a>
+<p>自定义指令的钩子函数:</p>
+<ul>
+<li><code>bind</code> 只调用一次，指令第一次绑定到元素上调用。用来初始化设置。</li>
+<li><code>inserted</code> 被绑定的元素插入到父节点时调用（要保证父节点存在）。</li>
+<li><code>update</code> 所在组件的 <code>VNode</code> 更新时调用，但是可能发生在其子 <code>VNode</code> 更新之前。指令的值可能发生了改变，也可能没有。但是你可以通过比较更新前后的值来忽略不必要的模板更新 (详细的钩子函数参数见下)。</li>
+<li><code>componentUpdated</code> 指令所在组件的 <code>VNode</code> 及其子 <code>VNode</code> 全部更新后调用。</li>
+<li><code>unbind</code> 只调用一次，指令与元素解绑时调用。</li>
+</ul>
+<p>每个自定义指令钩子函数的内部参数（直接拷贝官网上的）:</p>
+<ul>
+<li><code>el</code> 绑定的 <code>DOM</code> 元素，可读。</li>
+<li><code>binding</code> 包含众多属性的对象:<ul>
+<li><code>name</code> 指令名，不包含 <code>v-</code> 前缀。</li>
+<li><code>value</code> 指令绑定值，通常是 <code>string</code>、<code>json</code>格式。</li>
+<li><code>oldValue</code> 指令绑定的前一个值，仅在 <code>update</code>、<code>componentUpdated</code>钩子中使用。无论值是否改变都可用。</li>
+<li><code>expression</code> 字符串形式的指令表达式。例如：<code>v-mydirective=&quot;1 + 1&quot;</code>, <code>expression</code> 就是 <code>1 + 1</code>。</li>
+<li><code>arg</code> 传给指令的参数，可选。例如：<code>v-mydirective:foo</code>, <code>arg</code>就是<code>foo</code>。</li>
+<li><code>modifiers</code> 一个包含修饰符的对象。例如：<code>v-my-directive.foo.bar</code>，修饰符对象是：<code>{foo: true, bar: true}</code></li>
+</ul>
+</li>
+<li><code>VNode</code> <code>Vue</code>编译生成的虚拟节点。移步 <a href="https://cn.vuejs.org/v2/api/#VNode-%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">VNode API</a> 来了解更多详情。</li>
+<li><code>oldNode</code> 上一个虚拟节点，仅在 <code>update</code> 和 <code>componentUpdated</code> 钩子中使用。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">HTML</span></span><br><span class="line"><span class="comment">    &lt;div id="wrap"&gt;</span></span><br><span class="line"><span class="comment">        &lt;input type="text" v-demo:foo.bar.lala="1 + 1" v-model="msg"&gt; &lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &lt;textarea v-focus&gt;&lt;/textarea&gt;</span></span><br><span class="line"><span class="comment">    &lt;/div&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#wrap'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: <span class="string">'hello'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    directives: &#123;</span><br><span class="line">        demo: &#123;</span><br><span class="line">            inserted(el, binding, VNode) &#123;</span><br><span class="line">                <span class="built_in">console</span>.log(el);  <span class="comment">// &lt;input type="text"&gt;</span></span><br><span class="line">                <span class="built_in">console</span>.log(binding.name);  <span class="comment">// focus</span></span><br><span class="line">                <span class="built_in">console</span>.log(binding.value);  <span class="comment">// 2</span></span><br><span class="line">                <span class="built_in">console</span>.log(binding.expression);  <span class="comment">// 1 + 1</span></span><br><span class="line">                <span class="built_in">console</span>.log(binding.arg);  <span class="comment">// foo</span></span><br><span class="line">                <span class="built_in">console</span>.log(binding.modifiers);  <span class="comment">// &#123;bar: true, lala: true&#125;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        focus: &#123;</span><br><span class="line">            inserted(el) &#123;</span><br><span class="line">                el.focus();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Vue-extend"><a href="#Vue-extend" class="headerlink" title="Vue.extend"></a>Vue.extend</h3><p><code>vue</code> 扩展构造器。主要来服务 <code>Vue.component</code> 来创建全局组件。<br>语法：<code>Vue.extend({object}options)</code><br>需要注意的是：</p>
+<ul>
+<li>组件和主组件有一点很大不同：<code>data</code> 选项必须是函数类型，且要返回 <code>json</code> 类型。（防止因为组件复用时，一数据变化其他也会变化）。</li>
+<li>该全局 <code>API</code> 的模板选项会覆盖挂载点。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">HTML</span></span><br><span class="line"><span class="comment">    &lt;div id="wrap"&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myExtend = Vue.extend(&#123;</span><br><span class="line">    template: <span class="string">'&lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            msg: <span class="string">'Vue.extend demo!'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> myExtend().$mount(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/06/07/Vue-全局API/Vue.extend.png" alt="Vue.extend"></p>
+<h3 id="Vue-filter"><a href="#Vue-filter" class="headerlink" title="Vue.filter"></a>Vue.filter</h3><p>过滤器。用来简单过滤后台请求的数据。<br>语法：<code>Vue.filter({string}id, {function}defination)</code>、<code>filters</code><br>注意：</p>
+<ul>
+<li>过滤器的 <code>function</code> 选项第一个参数是被过滤的数据。</li>
+<li>多过虑器（前一个过滤器返回值作为后一个过滤器的第一个参数），用 <code>|</code> 隔开。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">HTML</span></span><br><span class="line"><span class="comment">    &lt;div id="wrap"&gt;&#123;&#123;msg | msgReverse(flag)&#125;&#125;&lt;/div&gt;  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">全局过滤器</span></span><br><span class="line"><span class="comment">    Vue.filter('msgReverse', function(str, bool) &#123;</span></span><br><span class="line"><span class="comment">        return bool ? str.split('').reverse().join('') : str;</span></span><br><span class="line"><span class="comment">    &#125;);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#wrap'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: <span class="string">'hello world!'</span>,</span><br><span class="line">        flag: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    filters: &#123;   <span class="comment">// 局部过滤器</span></span><br><span class="line">        msgReverse(str, bool) &#123;</span><br><span class="line">            <span class="keyword">return</span> bool ? str.split(<span class="string">''</span>).reverse().join(<span class="string">''</span>) : str;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Vue-component"><a href="#Vue-component" class="headerlink" title="Vue.component"></a>Vue.component</h3><p>全局注册组件，相对于局部组件不需要引入。语法： <code>Vue.component({string}id, {object|function}defination)</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> HTML</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&lt;div id="wrap"&gt;</span></span><br><span class="line"><span class="comment">    &lt;my-component1&gt;&lt;/my-component1&gt;</span></span><br><span class="line"><span class="comment">    &lt;my-component2&gt;&lt;/my-component2&gt;</span></span><br><span class="line"><span class="comment">&lt;/div&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">Vue.component(<span class="string">'my-component1'</span>, Vue.extend(&#123;</span><br><span class="line">    template: <span class="string">'&lt;div&gt;&#123;&#123;componentMsg&#125;&#125;&lt;/div&gt;'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            componentMsg: <span class="string">'组件内部数据!'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实现同样的功能，第二个参数直接使用 &#123;&#125; 形式，比 Vue.extend 更高效、简洁!</span></span><br><span class="line">Vue.component(<span class="string">'my-component2'</span>, &#123;</span><br><span class="line">    template: <span class="string">'&lt;div&gt;&#123;&#123;componentMsg&#125;&#125;&lt;/div&gt;'</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            componentMsg: <span class="string">'组件内部数据!'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#wrap'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: <span class="string">'hello world!'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Vue-use"><a href="#Vue-use" class="headerlink" title="Vue.use"></a>Vue.use</h3><p>引入组件（插件）。语法：<code>Vue.use({object|function}plugin)</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先使用require引入通过npm安装的包，在Vue对象上引入插件。 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> VueRouter = <span class="built_in">require</span>(<span class="string">'vue-router'</span>),</span><br><span class="line">    Vue = <span class="built_in">require</span>(<span class="string">'vue'</span>),</span><br><span class="line">    VueAwesomeSwiper = <span class="built_in">require</span>(<span class="string">'vue-awesome-swiper'</span>);</span><br><span class="line">Vue.use(VueRouter).use(VueAwesomeSwiper)....</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue-全局API/" rel="tag"># Vue 全局API</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/06/Vue-内部指令/" rel="next" title="Vue 内部指令">
+                <i class="fa fa-chevron-left"></i> Vue 内部指令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -412,6 +598,13 @@ $(function() {
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -432,8 +625,17 @@ $(function() {
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,6 +727,22 @@ $(function() {
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#全局-API"><span class="nav-number">1.</span> <span class="nav-text">全局 API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-directive"><span class="nav-number">2.</span> <span class="nav-text">Vue.directive</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-extend"><span class="nav-number">3.</span> <span class="nav-text">Vue.extend</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-filter"><span class="nav-number">4.</span> <span class="nav-text">Vue.filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-component"><span class="nav-number">5.</span> <span class="nav-text">Vue.component</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-use"><span class="nav-number">6.</span> <span class="nav-text">Vue.use</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -662,6 +880,10 @@ $(function() {
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
