@@ -87,14 +87,15 @@
 <meta property="og:site_name" content="It&#39;s not easy">
 <meta property="og:description" content="对象对象是实物的抽象，也可以说它是一个容器，其中封装了属性和方法。 面向对象的特点面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程，更适合多人合作的大型软件项目。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/4.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/1.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/2.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/3.png">
-<meta property="og:updated_time" content="2018-06-03T16:44:02.462Z">
+<meta property="og:updated_time" content="2018-06-21T02:18:30.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象 OOP">
 <meta name="twitter:description" content="对象对象是实物的抽象，也可以说它是一个容器，其中封装了属性和方法。 面向对象的特点面向对象编程具有灵活、代码可复用、高度模块化等特点，容易维护和开发，比起由一系列函数或指令组成的传统的过程式编程，更适合多人合作的大型软件项目。">
-<meta name="twitter:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/17/面向对象-OOP/4.png">
 
 
 
@@ -400,6 +401,8 @@
 <li>执行构造函数内部代码，给中间对象挂载属性、方法。</li>
 <li>隐式返回 <code>this</code> 。</li>
 </ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.showName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="keyword">this</span>.name); &#125;;</span><br><span class="line">Person.prototype.desc = <span class="string">'我是Person的原型!'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> Person(<span class="string">'Bob'</span>, <span class="number">20</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// new 操作符后干了什么???</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">personTemp</span>(<span class="params">Fn, ...args</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obj = <span class="built_in">Object</span>.create(Fn.prototype);  <span class="comment">// 创建了空对象，并把它的原型设置为构造函数的原型对象。</span></span><br><span class="line">    Fn.apply(obj, args);     <span class="comment">// 执行构造函数内部代码，改变this指向使其指向空对象，并给它挂载属性和方法。</span></span><br><span class="line">    <span class="keyword">return</span> obj;   <span class="comment">// 返回挂载后的对象。</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(personTemp(<span class="string">'Bob'</span>, <span class="number">20</span>));</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/05/17/面向对象-OOP/4.png" alt="构造函数构造对象的内部机制"></p>
 <h4 id="构造函数返回值"><a href="#构造函数返回值" class="headerlink" title="构造函数返回值"></a>构造函数返回值</h4><p>构造函数返回值默认是已经封装好了的 <code>this</code> 对象。如果返回基本类型，则返回值无效，相当于 <code>new</code> 命令会忽略这支语句，但是一旦返回 <code>object</code> 类型的数据，将会替代 <code>this</code> 。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Demo1</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'test'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Demo2</span>(<span class="params">age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Demo1(<span class="string">'Bob'</span>)  <span class="comment">// &#123;name: Bob&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Demo2(<span class="number">20</span>)  <span class="comment">// [1,2,3]</span></span><br></pre></td></tr></table></figure>
 <h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>每个函数都有 <code>prototype</code> 属性,该属性值是一个对象，即原型对象。原型对象出现的原因是挂载实例的公共属性和方法，减少创建每个实例的内存消耗。原型内部有一属性是指向构造函数的 <code>constructor</code> 。通过构造函数访问到原型对象：<code>构造函数.prototype</code></p>
@@ -553,7 +556,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -575,7 +578,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
