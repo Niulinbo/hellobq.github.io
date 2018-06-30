@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[typescript基础数据类型]]></title>
+    <url>%2F2018%2F06%2F30%2Ftypescript%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[typescript 类型注解在 typescript 使用 : 类型 来标注变量具体的数据类型，对 javascript 变量随意性有了具体类型约束。 布尔值 boolean1let bool: boolean = true; 数字 numbertypescript 和 javascript 一样，所有数字都是以浮点数形式存储的，支持二、八、十、十六进制数字的变量。1234let number1: number = 0b1010, number2: number = 100, number3: number = 0o172, number4: number = 0x17fb; 字符串 string12345let str1: string = 'hello', str2: String = 'hello', str3: string = "hello", str4: string = `hello`, str5: string = `$&#123;str4&#125;` 任意值 any使用 any 类型的变量目的：躲避掉编译时类型检查 1234// 当你只知道一部分数据类型时，可以使用 any 声明数组let arr: any[] = [1, true, 'hello', function() &#123; alert(1); &#125;];arr[100] = true; 数组 Arraytypescript 使用两种方法定义数组。 在元素类型后面紧跟着 [] 使用数组泛型 Array&lt;元素类型&gt; 123let numArr: number[] = [1,2,3,4,5,6], strArr: Array&lt;string&gt; = ['hello', 'world'], arr: any[] = [1, true, 'hello', function() &#123; alert(1); &#125;]; 元组 Tuple如果一个数组的项的类型和个数都确定的话，可以使用元组来声明变量。 12let myTuple1: [string, number] = ['hello', 123];let myTuple2: [string, number] = [ 123', hello']; // Error 数据类型和数据要匹配 当访问已知索引的数据时，可使用其 api 来操作数据；访问一个越界的元素的，此时会使用联合类型 (string | number):123456let tuple: [string, number] = ['hello', 123];let ch = tuple[0].slice(-1);let ch1 = tuple[1].slice(-1); // Error 数组没有该方法tuple[3] = 'world'; // 'world' 的数据类型为string，在联合类型(string|number)中tuple[4] = true; // Error boolean不在联合类型中 枚举 enum枚举是对 javascript 数据类型的补充。意义为：物以类聚。为一组数据赋予一好听的名字。枚举成员不能有数值 1234567891011// 普通枚举使用enum Color &#123;Green, Red, Pink&#125;let myColor: Color = Color.Green; // 0 已知项=&gt;索引let myColor1: string = Color[2]; // 'Pink' 已知索引=&gt;具体项// 手动改变枚举项的索引, 后面项索引一次叠加enum Color1 &#123;Green, Red = 3, Pink, Orange = 10&#125;let myColor: Color1 = Color1.Pink; // 4 空值 void 只能给数据类型为 void 的变量赋值为 undefined | null； 函数返回值类型为 void，实际返回值和 javascript 一样为 undefined； 1234function fn(msg: string): void&#123; console.log(msg); // 'void 测试！'&#125;console.log( fn('void 测试！') ); // undefined undefined 和 null默认情况下，这两种类型是其他类型的子类型。比如：可以使用 undefined|null 赋值给类型为 number 的变量。 NeverNever 表示永不存在值的类型。never 类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是 never 的子类型或可以赋值给 never 类型（除了 never 本身之外）。 即使 any 也不可以赋值给 never。(个人认为这个类型很鸡肋) 类型断言可认为类型转换, 不进行特殊的数据检查和解构。它没有运行时的影响，只是在编译阶段起作用。类型断言两种方式： &lt;数据类型&gt; as 推荐使用，当你在TypeScript里使用JSX时，只有as语法断言是被允许的。 123let str: any = 'hello world!';console.log( (&lt;string&gt;str).length, (str as string).length ); // 12 12 注意这种类型转换是能是大范围转换为小范围，例如：any =&gt; 其他类型，不能 number =&gt; string123let strNum: string = '156';console.log( (strNum as number).toFixed(2) ); // Error 不能转换！]]></content>
+      <categories>
+        <category>typescript</category>
+      </categories>
+      <tags>
+        <tag>typescript基础数据类型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[typescript 简介]]></title>
+    <url>%2F2018%2F06%2F30%2F%E5%88%9D%E5%A7%8Btypescript%2F</url>
+    <content type="text"><![CDATA[typescript 的概念typescript 是 javascript 的扩展，是 javascript 的超集，并且是一门由微软开发的跨平台、跨浏览器的开源语言，主要用于开发大型应用级软件。 typescript 和 javascript正如上述，typescript 是 javascript 的超级，是 javascript 的扩展，typescript 具有 es5-7 全部语法规范。 typescript 和 javascript有一下联系： 引入类、接口、模块的概念，虽然 javascript 之前也有，不过 typescript 中更加规范。 将 .ts 文件编译成 .js文件时，存在类型检查，不再像 js 一样拥有变量类型及个数的随意性。 始终于 javascript。在 .ts 文件中可直接写 js 代码，最后编译成也是 js 代码（毕竟浏览器的脚本语言默认就是 javascript）。 安装 typescriptnpm 安装 npm i -g typescript npm update -g typescript 更新 typescript 到最新版 tsc -v 查看 typescript 版本（更过 tsc 命令, tsc --help）。 demo: 使用 typescript 编写 helloworld12345function printHelloWorld(msg) &#123; return `$&#123;msg&#125; write hello world!`;&#125;console.log( printHelloWorld('typescript') ); 源文件： 使用 tsc + 文件路径 -w(--watch) 自动编译 .ts 文件，默认是编译成与 .ts 文件同目录的 .js 文件。由此可见，.ts 文件可自动被编译成 ECMAscript5 语法规则的 .js文件。 结果： 更多 typescript学习链接： typescript 中文文档 typescript 具体语法详解 typescript 源码 网友博客]]></content>
+      <categories>
+        <category>typescript</category>
+      </categories>
+      <tags>
+        <tag>typescript 简介</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[闭包]]></title>
     <url>%2F2018%2F06%2F29%2F%E9%97%AD%E5%8C%85%2F</url>
     <content type="text"><![CDATA[闭包的概念函数之间存在嵌套关系，并且内部函数可随时访问外部函数的局部变量（或者形参）。它是依托函数来创建的，因为只有函数有自己的作用域结构。 作用能避免污染全局环境下保存函数内部的局部变量。仅允许外界通过特定的函数接口来访问（或设置）局部变量。利用这一特性，可发现不少前端库为了实现模块化、不污染全局均使用了闭包，比如比较熟悉的 jquery。 危害由于闭包暴露出的外部接口可被随时调用，因此该函数常驻内存中，该函数接口又会依赖外部函数，因此整个外部函数及其内部私有数据常驻内存中，这样的话内存开销就比较大了，会导致网页性能的问题。在 ie 中可能会造成内存泄漏。 解决方式是：在函数退出之前全部删除变量或者给其赋值为 null，便于垃圾回收。 使用闭包 demo123456789// 闭包保存变量值for(var i = 0; i &lt; 10; ++i) &#123; ((i) =&gt; &#123; setTimeout(() =&gt; &#123; console.log(i) &#125;, 10 * i); &#125;)(i);&#125; 12345678910111213141516171819202122232425262728// 闭包模拟数据库let dataOperation = (() =&gt; &#123; var jsonArr = [&#123; id: 1, username: 'Bob', pwd: '123456' &#125;, &#123; id: 2, username: 'Alice', pwd: '654321' &#125;, &#123; id: 3, username: 'Jack', pwd: '666666' &#125;]; return &#123; getData(id) &#123; return jsonArr.filter(json =&gt; json.id === id); &#125;, setData(myJson) &#123; let index = jsonArr.findIndex(json =&gt; json.username === myJson.username); jsonArr.splice(index, 1, myJson); console.log(jsonArr); &#125; &#125;&#125;)();]]></content>
