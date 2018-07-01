@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端seo]]></title>
+    <url>%2F2018%2F07%2F01%2F%E5%89%8D%E7%AB%AFseo%2F</url>
+    <content type="text"><![CDATA[seoseo: Search Engine Optimization 搜索引擎优化。seo 主要通过网站结构建设、内容调整、代码优化来提升网站，使网站更容易被搜索引擎抓取。 前端能做的 seo（主要是代码优化） 合理地设置网站 title、description、keywords, 因为搜索引擎对三者的权重依次减少。 不同页面不同 title； description 需要言简意赅地概括网站内容； keywords 例举网站重要关键字； html 标签语义化。类似地，搜索引擎对不同标签的搜索权重不同。 图片的 alt 属性尽量添加上。 由于搜索引擎抓取不到 iframe 的内容，因此尽量不用 iframe 标签。]]></content>
+      <categories>
+        <category>h5</category>
+      </categories>
+      <tags>
+        <tag>前端seo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[typescript声明变量及解构]]></title>
     <url>%2F2018%2F06%2F30%2Ftypescript%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F%E5%8F%8A%E8%A7%A3%E6%9E%84%2F</url>
     <content type="text"><![CDATA[typescript 变量声明typescript 也可用 var、let、const 声明变量，但是更推荐 es6 所提倡 let、const 声明变量。const 声明是对 let 进一步的约束，变量值不能更改。同 es6 类似地：使用 let、const 声明的变量有一下便利： 让变量使用更加规范 变量不能重复定义； 变量不能生命前使用，会造成短暂性死区； 变量所处的 {} 内存在块级作用域，不需要再像 es5 一样使用闭包来保存变量； 变量只在自己块作用下有效； const 与 let 声明的变量唯一不同是：使用 const 声明的变量不能更改变量值，其他语法一样； 变量不声明不允许使用这种机制可解决使用 var 带来变量提升的弊端； 12345678910111213141516171819202122232425262728293031323334// 变量不能重复定义let str = '123';let str = '456'; // Errorlet str1 = '123';var str1 = '456'; // Errorvar str2 = '123';var str2 = '456'; // 没什么卵用，覆盖// 变量不能生命前使用，会造成短暂性死区n++; // Errorlet n = 0;// 块级作用域for(let i = 0; i &lt; 10; ++i) &#123; setTimeout(() =&gt; &#123; console.log(i); &#125;, 100 * i);&#125;// 变量只在自己块作用下有效&#123; let n = 0;&#125;n ++; // Error// const 声明的变量不能更改变量值const LEN = 20;LEN = 1; // Error 不能改变常量值（只读属性也是类似） 解构数组解构、对象解构 对数组解构，需要索引相同； 对对象解构，需要 property 相同； 1234567891011121314151617181920212223242526272829303132333435363738394041// 交换变量值let a: number = 1, b: number = 2;[b, a] = [a, b];let [a, ...b] = [1,2,3,4]; // 使用 ...展开数组let [,a,,b] = [1,2,3,4]; // 选择性取数组数据let o = &#123; a: "foo", b: 12, c: "bar"&#125;;let &#123; a, b &#125; = o; // 这里不需要clet &#123;c, ...d&#125; = o; // 使用 ...展开对象 d是个对象// 当对象解构时，重命名属性名let o = &#123; a: "foo", b: 12, c: "bar"&#125;;let &#123; a: c, b: d &#125; = o; // 注意：此时a,b不能被访问到；冒号不再标注变量的类型// 解构时，使用默认值function keepWholeObject(wholeObject: &#123; a: string, b?: number &#125;) &#123; let &#123; a, b = 1001 &#125; = wholeObject;&#125;// 在声明时使用解构，并提供默认值function f(&#123; a, b = 0 &#125; = &#123; a: "haha" &#125;): void &#123; console.log(a, b);&#125;f(&#123; a: "yes" &#125;); f(); f(&#123;&#125;); // Error 既然选择传参，定要传递属性a]]></content>

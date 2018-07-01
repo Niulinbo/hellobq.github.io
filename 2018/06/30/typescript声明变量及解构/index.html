@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="It&#39;s not easy">
 <meta property="og:description" content="typescript 变量声明typescript 也可用 var、let、const 声明变量，但是更推荐 es6 所提倡 let、const 声明变量。const 声明是对 let 进一步的约束，变量值不能更改。同 es6 类似地：使用 let、const 声明的变量有一下便利：  让变量使用更加规范 变量不能重复定义； 变量不能生命前使用，会造成短暂性死区； 变量所处的 {} 内存在块级作用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-30T16:34:25.954Z">
+<meta property="og:updated_time" content="2018-06-30T16:40:30.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="typescript声明变量及解构">
 <meta name="twitter:description" content="typescript 变量声明typescript 也可用 var、let、const 声明变量，但是更推荐 es6 所提倡 let、const 声明变量。const 声明是对 let 进一步的约束，变量值不能更改。同 es6 类似地：使用 let、const 声明的变量有一下便利：  让变量使用更加规范 变量不能重复定义； 变量不能生命前使用，会造成短暂性死区； 变量所处的 {} 内存在块级作用">
@@ -405,6 +405,7 @@
 <li>对对象解构，需要 <code>property</code> 相同；</li>
 </ul>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 交换变量值</span></span><br><span class="line"><span class="keyword">let</span> a: <span class="built_in">number</span> = <span class="number">1</span>,</span><br><span class="line">    b: <span class="built_in">number</span> = <span class="number">2</span>;</span><br><span class="line">[b, a] = [a, b];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [a, ...b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];  <span class="comment">// 使用 ...展开数组</span></span><br><span class="line"><span class="keyword">let</span> [,a,,b] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];  <span class="comment">// 选择性取数组数据</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> o = &#123;</span><br><span class="line">  a: <span class="string">"foo"</span>,</span><br><span class="line">  b: <span class="number">12</span>,</span><br><span class="line">  c: <span class="string">"bar"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123; a, b &#125; = o;   <span class="comment">// 这里不需要c</span></span><br><span class="line"><span class="keyword">let</span> &#123;c, ...d&#125; = o;  <span class="comment">// 使用 ...展开对象 d是个对象</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当对象解构时，重命名属性名</span></span><br><span class="line"><span class="keyword">let</span> o = &#123;</span><br><span class="line">  a: <span class="string">"foo"</span>,</span><br><span class="line">  b: <span class="number">12</span>,</span><br><span class="line">  c: <span class="string">"bar"</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123; a: c, b: d &#125; = o;  <span class="comment">// 注意：此时a,b不能被访问到；冒号不再标注变量的类型</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解构时，使用默认值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">keepWholeObject</span>(<span class="params">wholeObject: &#123; a: <span class="built_in">string</span>, b?: <span class="built_in">number</span> &#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; a, b = <span class="number">1001</span> &#125; = wholeObject;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在声明时使用解构，并提供默认值</span></span><br><span class="line">function f(&#123; a, b = 0 &#125; = &#123; a: "haha" &#125;): void &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(a, b);</span><br><span class="line">&#125;</span><br><span class="line">f(&#123; a: <span class="string">"yes"</span> &#125;); </span><br><span class="line">f(); </span><br><span class="line">f(&#123;&#125;); <span class="comment">// Error 既然选择传参，定要传递属性a</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -443,6 +444,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/01/前端seo/" rel="prev" title="前端seo">
+                前端seo <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -526,7 +531,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -548,7 +553,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
