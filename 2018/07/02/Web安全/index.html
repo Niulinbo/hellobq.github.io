@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/07/02/Web安全/csrf.png">
 <meta property="og:image" content="http://yoursite.com/2018/07/02/Web安全/天猫控制台.png">
-<meta property="og:updated_time" content="2018-07-02T08:02:05.216Z">
+<meta property="og:updated_time" content="2018-07-02T08:10:28.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web安全">
 <meta name="twitter:description" content="xssxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
@@ -410,6 +410,7 @@
 </ul>
 <h3 id="控制台注入代码"><a href="#控制台注入代码" class="headerlink" title="控制台注入代码"></a>控制台注入代码</h3><p>黑客诱骗用户去浏览器控制台粘贴东西实现植入 <code>js</code> 脚本。和 <code>xss</code> 攻击原理差不多的。<br>例子天猫商城：<br><img src="/2018/07/02/Web安全/天猫控制台.png" alt="天猫控制台"></p>
 <h3 id="钓鱼"><a href="#钓鱼" class="headerlink" title="钓鱼"></a>钓鱼</h3><p>原理：伪装正常网站样式，让用户输入用户名、密码等个人隐私信息。或者跳转非法的雷同页面。<br>比如：在危险网站上蹦出来一个 <code>qq</code> 登陆，做得和官网上一模一样，如果用户不看域名的化，直接输入信息就会导致信息丢失；在正确域名下输入信息，通过植入 <code>js</code> 代码，把网页链接变为非法网站，这个非法网站和合法网站及其类似（这有点像 <code>xss</code>）。</p>
+<h3 id="网页验证码"><a href="#网页验证码" class="headerlink" title="网页验证码"></a>网页验证码</h3><p>验证码出现的目的：证明当前登陆站点的是个人，并不是通过暴力破解实现登陆、注册的机器。</p>
 
       
     </div>
@@ -615,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制台注入代码"><span class="nav-number">3.</span> <span class="nav-text">控制台注入代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼"><span class="nav-number">4.</span> <span class="nav-text">钓鱼</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制台注入代码"><span class="nav-number">3.</span> <span class="nav-text">控制台注入代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼"><span class="nav-number">4.</span> <span class="nav-text">钓鱼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网页验证码"><span class="nav-number">5.</span> <span class="nav-text">网页验证码</span></a></li></ol></div>
             
 
           </div>
