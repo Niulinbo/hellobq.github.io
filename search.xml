@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[我对前端自动化、模块化、模块化的理解]]></title>
+    <url>%2F2018%2F07%2F03%2F%E6%88%91%E5%AF%B9%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96%E3%80%81%E6%A8%A1%E5%9D%97%E5%8C%96%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Web安全]]></title>
     <url>%2F2018%2F07%2F02%2FWeb%E5%AE%89%E5%85%A8%2F</url>
     <content type="text"><![CDATA[xssxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。 防范方法： 限制用户提交内容的长度，也可以限定特定字符； 对用户输入、提交的内容进行正则过滤、编码或者或者转码； 加密传输重要内容； 对于稍微重要的 cookie 信息给设置 httpOnly 属性，让前端 js 脚本不能获取 cookie 信息。 CSRFCSRF：Cross Site Request Forgery 跨域请求伪造攻击原理：伪装成站点用户进行攻击。攻击者通过盗用用户的身份信息，并以用户的名义发送恶意请求。 防范方法： 验证 HTTP Referer 字段。在 HTTP 头中有 Referer 字段记录该 HTTP 请求的来源地址，如果跳转的网站与来源地址相符，那就是合法的，如果不符则可能是 csrf 攻击，拒绝该请求。因为通常来说，Referer字段应和请求的地址位于同一域名下。 在 http 请求头中加入 token。 这种的话在请求的时候加一个 token，值可以是随机产生的一段数字，token 是存入数据库之后，后台返给客户端的，如果客户端再次登录的时候，后台发现 token 没有，或者通过查询数据库不正确，那么就拒绝该请求。 如果想防止一个账号避免在不同的机器上登录，那么我们就可以通过 token 来判断，如果a机器登录后，我们就将用户的 token 从数据库清除，从新生成，那么另外一台b机器在执行操作的时候，token 就失效了，只能重新登录，这样就可以防止两台机器登同一账号。 控制台注入代码黑客诱骗用户去浏览器控制台粘贴东西实现植入 js 脚本。和 xss 攻击原理差不多的。例子天猫商城： 钓鱼原理：伪装正常网站样式，让用户输入用户名、密码等个人隐私信息。或者跳转非法的雷同页面。比如：在危险网站上蹦出来一个 qq 登陆，做得和官网上一模一样，如果用户不看域名的化，直接输入信息就会导致信息丢失；在正确域名下输入信息，通过植入 js 代码，把网页链接变为非法网站，这个非法网站和合法网站及其类似（这有点像 xss）。 网页验证码验证码出现的目的：证明当前登陆站点的是个人，并不是通过暴力破解实现登陆、注册的机器。]]></content>
       <categories>
         <category>Web安全</category>
       </categories>
-      <tags>
-        <tag>Web安全</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[html 面试小结]]></title>
@@ -18,9 +20,6 @@
       <categories>
         <category>h5</category>
       </categories>
-      <tags>
-        <tag>html 面试小结</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[typescript声明变量及解构]]></title>
@@ -29,9 +28,6 @@
       <categories>
         <category>typescript</category>
       </categories>
-      <tags>
-        <tag>typescript声明变量及解构</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[typescript基础数据类型]]></title>
@@ -40,9 +36,6 @@
       <categories>
         <category>typescript</category>
       </categories>
-      <tags>
-        <tag>typescript基础数据类型</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[typescript 简介]]></title>
@@ -51,9 +44,6 @@
       <categories>
         <category>typescript</category>
       </categories>
-      <tags>
-        <tag>typescript 简介</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[闭包]]></title>
@@ -62,9 +52,6 @@
       <categories>
         <category>javascript</category>
       </categories>
-      <tags>
-        <tag>闭包</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vue 特殊特性]]></title>
@@ -73,9 +60,6 @@
       <categories>
         <category>Vue</category>
       </categories>
-      <tags>
-        <tag>Vue 特殊特性</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vue 全局API]]></title>
@@ -84,9 +68,6 @@
       <categories>
         <category>Vue</category>
       </categories>
-      <tags>
-        <tag>Vue 全局API</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[Vue 内部指令]]></title>
@@ -95,9 +76,6 @@
       <categories>
         <category>Vue</category>
       </categories>
-      <tags>
-        <tag>Vue 内部指令</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[语义化标签、css3新增选择器、css3新增样式]]></title>
@@ -106,9 +84,6 @@
       <categories>
         <category>h5</category>
       </categories>
-      <tags>
-        <tag>h5 语义化标签</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[this 指向]]></title>
@@ -117,9 +92,6 @@
       <categories>
         <category>javascript</category>
       </categories>
-      <tags>
-        <tag>this 指向</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[本地存储]]></title>
@@ -128,9 +100,6 @@
       <categories>
         <category>h5</category>
       </categories>
-      <tags>
-        <tag>本地存储</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[面向对象 OOP]]></title>
@@ -139,9 +108,6 @@
       <categories>
         <category>javascript</category>
       </categories>
-      <tags>
-        <tag>js 面向对象</tag>
-      </tags>
   </entry>
   <entry>
     <title><![CDATA[原生js获取DOM节点]]></title>
@@ -150,8 +116,5 @@
       <categories>
         <category>javascript</category>
       </categories>
-      <tags>
-        <tag>原生js获取DOM节点</tag>
-      </tags>
   </entry>
 </search>
