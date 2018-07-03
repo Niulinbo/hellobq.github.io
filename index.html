@@ -277,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/我对前端自动化、模块化、模块化的理解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/我对前端自动化、模块化、组件化的理解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="It's not easy">
@@ -296,7 +296,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/03/我对前端自动化、模块化、模块化的理解/" itemprop="url">我对前端工程化、模块化、组件化的理解</a></h1>
+                <a class="post-title-link" href="/2018/07/03/我对前端自动化、模块化、组件化的理解/" itemprop="url">我对前端工程化、模块化、组件化的理解</a></h1>
         
 
         <div class="post-meta">
@@ -349,8 +349,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/03/我对前端自动化、模块化、模块化的理解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/03/我对前端自动化、模块化、模块化的理解/" itemprop="commentCount"></span>
+                <a href="/2018/07/03/我对前端自动化、模块化、组件化的理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/03/我对前端自动化、模块化、组件化的理解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -383,6 +383,12 @@
             <h4 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h4><p><code>node.js</code> 未出现之前，前后端并未实现分离，所谓的前端就是简单页面制作，会 <code>html</code> 完成网页结构，<code>css</code> 修饰网页， <code>jquery</code> 完成网页 <code>dom</code> 操作、实现与用户交互即可，或者说前端仅仅是后端一个附属品。但是随着 <code>node.js</code> 之后，前端越来越受重视，所占软件开发的比重愈来愈高，前端规模越来越大，这将会引出工程学的概念，前端工程化根据业务特点，将前端开发流程（要素）分为：需求分析、技术选型、代码规范、组件管理、真机测试、自动化构建、部署上线。按照这种开发流程的（前端工程化的）目的就是提供前端开发效率和质量。</p>
 <h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><p>我认为模块最重要的就是：能够重用、分而治之。<br>每一个模块都有自己高度封装的逻辑代码，并且它们每一个模块并不会和其他模块有很强的代码粘连性。例如：在模块 <code>A</code> 中使用模块 <code>B</code> 仅需引入模块 <code>B</code>，使用模块B暴露出的接口、函数、对象就行。这种模块内部高度封装，各模块之间关联性不强的前端模块化操作也符合“高内聚、低耦合”的模块设计构想。涉及前端模块化的点有：<code>es6</code>、<code>Common.js</code>、<code>AMD</code>、<code>CMD</code> 、<code>less</code>、<code>sass</code>等。</p>
 <h4 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h4><p>组件化是基于模块化的，模块化是对同一种东西的封装，而组件化则在模块化的基础上添加了其他元素。比如 <code>node.js</code> 中单个 <code>.js</code> 文件是个模块，在 <code>vue.js</code> 中，<code>.vue</code> 文件是个组件了，因为其内部多了除 <code>js</code> 以外其他东西。除了模块重用、分而治之的特点外，组件还有组合性的特点。把一个页面分为多个分区，亦可看多个组件，组合这么多的组件也就完成当前页面。</p>
+<p>学习链接：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&amp;mid=2651224143&amp;idx=2&amp;sn=b2f3457ee7fc5f81858886efb7be0374&amp;chksm=bd49a1cb8a3e28dd1dcebea92d0ac6aa61aa4df2061b47f0b00956aa0111f838dfa29e4f3a1e&amp;mpshare=1&amp;scene=1" target="_blank" rel="noopener">前端组件化</a></li>
+<li><a href="https://mp.weixin.qq.com/s/GpVSWFAEds9NQ9z_gKjImg" target="_blank" rel="noopener">深入探讨前端组件化开发</a></li>
+<li><a href="https://segmentfault.com/a/1190000008358748" target="_blank" rel="noopener">浅说前端工程化</a></li>
+</ul>
 
           
         
