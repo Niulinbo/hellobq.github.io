@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前端开发者的博客，记录我的学习历程">
+<meta name="description" content="前端工程化node.js 未出现之前，前后端并未实现分离，所谓的前端就是简单页面制作，会 html 完成网页结构，css 修饰网页， jquery 完成网页 dom 操作、实现与用户交互即可，或者说前端仅仅是后端一个附属品。但是随着 node.js 之后，前端越来越受重视，所占软件开发的比重愈来愈高，前端规模越来越大，这将会引出工程学的概念，前端工程化根据业务特点，将前端开发流程（要素）分为：需求">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我对前端自动化、模块化、模块化的理解">
+<meta property="og:title" content="我对前端工程化、模块化、组件化的理解">
 <meta property="og:url" content="http://yoursite.com/2018/07/03/我对前端自动化、模块化、模块化的理解/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="前端开发者的博客，记录我的学习历程">
+<meta property="og:description" content="前端工程化node.js 未出现之前，前后端并未实现分离，所谓的前端就是简单页面制作，会 html 完成网页结构，css 修饰网页， jquery 完成网页 dom 操作、实现与用户交互即可，或者说前端仅仅是后端一个附属品。但是随着 node.js 之后，前端越来越受重视，所占软件开发的比重愈来愈高，前端规模越来越大，这将会引出工程学的概念，前端工程化根据业务特点，将前端开发流程（要素）分为：需求">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-03T15:31:46.775Z">
+<meta property="og:updated_time" content="2018-07-03T16:23:22.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我对前端自动化、模块化、模块化的理解">
-<meta name="twitter:description" content="前端开发者的博客，记录我的学习历程">
+<meta name="twitter:title" content="我对前端工程化、模块化、组件化的理解">
+<meta name="twitter:description" content="前端工程化node.js 未出现之前，前后端并未实现分离，所谓的前端就是简单页面制作，会 html 完成网页结构，css 修饰网页， jquery 完成网页 dom 操作、实现与用户交互即可，或者说前端仅仅是后端一个附属品。但是随着 node.js 之后，前端越来越受重视，所占软件开发的比重愈来愈高，前端规模越来越大，这将会引出工程学的概念，前端工程化根据业务特点，将前端开发流程（要素）分为：需求">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>我对前端自动化、模块化、模块化的理解 | It's not easy</title>
+  <title>我对前端工程化、模块化、组件化的理解 | It's not easy</title>
   
 
 
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我对前端自动化、模块化、模块化的理解</h1>
+          <h1 class="post-title" itemprop="name headline">我对前端工程化、模块化、组件化的理解</h1>
         
 
         <div class="post-meta">
@@ -316,6 +316,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端之路/" itemprop="url" rel="index">
+                    <span itemprop="name">前端之路</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -354,7 +376,10 @@
       
 
       
-        
+        <h4 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h4><p><code>node.js</code> 未出现之前，前后端并未实现分离，所谓的前端就是简单页面制作，会 <code>html</code> 完成网页结构，<code>css</code> 修饰网页， <code>jquery</code> 完成网页 <code>dom</code> 操作、实现与用户交互即可，或者说前端仅仅是后端一个附属品。但是随着 <code>node.js</code> 之后，前端越来越受重视，所占软件开发的比重愈来愈高，前端规模越来越大，这将会引出工程学的概念，前端工程化根据业务特点，将前端开发流程（要素）分为：需求分析、技术选型、代码规范、组件管理、真机测试、自动化构建、部署上线。按照这种开发流程的（前端工程化的）目的就是提供前端开发效率和质量。</p>
+<h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><p>我认为模块最重要的就是：能够重用、分而治之。<br>每一个模块都有自己高度封装的逻辑代码，并且它们每一个模块并不会和其他模块有很强的代码粘连性。例如：在模块 <code>A</code> 中使用模块 <code>B</code> 仅需引入模块 <code>B</code>，使用模块B暴露出的接口、函数、对象就行。这种模块内部高度封装，各模块之间关联性不强的前端模块化操作也符合“高内聚、低耦合”的模块设计构想。涉及前端模块化的点有：<code>es6</code>、<code>Common.js</code>、<code>AMD</code>、<code>CMD</code> 、<code>less</code>、<code>sass</code>等。</p>
+<h4 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h4><p>组件化是基于模块化的，模块化是对同一种东西的封装，而组件化则在模块化的基础上添加了其他元素。比如 <code>node.js</code> 中单个 <code>.js</code> 文件是个模块，在 <code>vue.js</code> 中，<code>.vue</code> 文件是个组件了，因为其内部多了除 <code>js</code> 以外其他东西。除了模块重用、分而治之的特点外，组件还有组合性的特点。把一个页面分为多个分区，亦可看多个组件，组合这么多的组件也就完成当前页面。</p>
+
       
     </div>
     
@@ -441,8 +466,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -472,7 +506,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -525,6 +559,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前端工程化"><span class="nav-number">1.</span> <span class="nav-text">前端工程化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块化"><span class="nav-number">2.</span> <span class="nav-text">模块化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件化"><span class="nav-number">3.</span> <span class="nav-text">组件化</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
