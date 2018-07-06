@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[单页应用和多页应用]]></title>
+    <url>%2F2018%2F07%2F06%2F%E5%8D%95%E9%A1%B5%E5%BA%94%E7%94%A8%E5%92%8C%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[多页应用 MPA多页应用：每次页面跳转 web后台都会返回新的 html 文件。是整页刷新。特点： 首页加载时间短。因为页面的跳转只需要向服务器请求一个 html 文件，拿来展示就行。 有利于 seo 优化。因为搜索引擎可识别 html 文件内容，根据内容的权重对网页进行排名。 缺点： 页面间切换慢。因为页面的跳转会加载与之页面相关的全部资源 js、img等，如果网络不流畅，就会出现页面卡断、白屏情况。 单页应用 SPA单页应用：每次页面跳转不需要请求会 html 文件，它是通过 js 清除当前页面内容、重新挂载新的页面形成的。是局部刷新特点： 不需要请求新的 html 文件和重复的资源文件，减少 http 请求次数、降低请求延时，带来页面间切换快的特点。 缺点： 首屏展示慢。需要请求 html、js 文件，当这些文件全部请求到时，才会展示页面。 seo 效果不好。因为单页面应用是靠 js 动态渲染产生的，而搜索引擎是不识别 js 文件的。 解决以上单页面缺点的方式：服务器端渲染。]]></content>
+      <categories>
+        <category>前端之路</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[vue-bus总线]]></title>
     <url>%2F2018%2F07%2F05%2Fvue-bus%E6%80%BB%E7%BA%BF%2F</url>
     <content type="text"><![CDATA[Vue 非父子组件通讯 频繁使用的 $emit、props 来传递，显得代码冗余、繁琐。 vuex：vue生态中的一个插件，用来保存组件间的共享数据，实现组件间的通讯。 bus 总线：当项目并不大使用 vuex 就是杀鸡用牛刀，可用 bus 总线技术实现组件通讯。 bus 总线为了解决非父子组件之间的关系，可以考虑从 bus 总线技术。其原理是：在 vue 的原型对象上挂载一个属性 bus（或者单独做一个 bus.vue 中央处理组件），这个属性是一个 vue 对象，这个对象就是非父子组件通讯的桥梁。当我们组件通讯时，使用 this.bus 找到该桥梁。即可利用 vue 对象内部方法 $emit 触发事件、$on 监听组件触发的事件并接受信息从而实现通讯。 bus 代码实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263/*HTML&lt;!-- 兄弟组件信息的互相传递 --&gt;&lt;div id="wrap"&gt; &lt;left&gt;&lt;/left&gt; &lt;right&gt;&lt;/right&gt;&lt;/div&gt;*/Vue.prototype.bus = new Vue();Vue.component('left', &#123; template: `&lt;div&gt; &lt;h3 @click="giveMsg"&gt; &#123;&#123;msg&#125;&#125; &lt;/h3&gt; &lt;/div&gt;`, data() &#123; return &#123; msg: '这是左边的组件' &#125; &#125;, methods: &#123; giveMsg() &#123; this.bus.$emit('giveMsgToRight', this.msg); &#125; &#125;, created() &#123; this.bus.$on('giveMsgToLeft', msg =&gt; &#123; console.log(msg); &#125;); &#125;, beforeDestory() &#123; // 最好在组件销毁前，清除事件监听 this.bus.$off('giveMsgToRight'); &#125;&#125;);Vue.component('right', &#123; template: `&lt;div&gt; &lt;h3 @click="giveMsg"&gt; &#123;&#123;msg&#125;&#125; &lt;/h3&gt; &lt;/div&gt;`, data() &#123; return &#123; msg: '这是右边的组件' &#125; &#125;, methods: &#123; giveMsg() &#123; this.bus.$emit('giveMsgToLeft', this.msg); &#125; &#125;, created() &#123; this.bus.$on('giveMsgToRight', msg =&gt; &#123; console.log(msg); &#125;); &#125;, beforeDestory() &#123; this.bus.$off('giveMsgToRight'); &#125;&#125;);const vm = new Vue(&#123; el: '#wrap'&#125;); bus 总线总结 可把这个 “桥梁” 单独拿出来作为一个 vue 组件，谁用谁导入。 组件销毁之前，需要去除 bus 上的事件监听。 稍微复杂点的项目，只能乖乖使用 vuex 进行更复杂的状态管理了。]]></content>
