@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="多页应用 MPA多页应用：每次页面跳转 web后台都会返回新的 html 文件。是整页刷新。特点：  首页加载时间短。因为页面的跳转只需要向服务器请求一个 html 文件，拿来展示就行。 有利于 seo 优化。因为搜索引擎可识别 html 文件内容，根据内容的权重对网页进行排名。  缺点：  页面间切换慢。因为页面的跳转会加载与之页面相关的全部资源 js、img等，如果网络不流畅，就会出现页面卡断">
+<meta name="description" content="单页应用 SPA单页应用：每次页面跳转不需要请求会 html 文件，它是通过 js 清除当前页面内容、重新挂载新的页面形成的。是局部刷新特点：  不需要请求新的 html 文件和重复的资源文件，减少 http 请求次数、降低请求延时，带来页面间切换快的特点。">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单页应用和多页应用">
 <meta property="og:url" content="http://yoursite.com/2018/07/06/单页应用和多页应用/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="多页应用 MPA多页应用：每次页面跳转 web后台都会返回新的 html 文件。是整页刷新。特点：  首页加载时间短。因为页面的跳转只需要向服务器请求一个 html 文件，拿来展示就行。 有利于 seo 优化。因为搜索引擎可识别 html 文件内容，根据内容的权重对网页进行排名。  缺点：  页面间切换慢。因为页面的跳转会加载与之页面相关的全部资源 js、img等，如果网络不流畅，就会出现页面卡断">
+<meta property="og:description" content="单页应用 SPA单页应用：每次页面跳转不需要请求会 html 文件，它是通过 js 清除当前页面内容、重新挂载新的页面形成的。是局部刷新特点：  不需要请求新的 html 文件和重复的资源文件，减少 http 请求次数、降低请求延时，带来页面间切换快的特点。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-06T02:36:26.798Z">
+<meta property="og:updated_time" content="2018-07-18T05:33:52.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单页应用和多页应用">
-<meta name="twitter:description" content="多页应用 MPA多页应用：每次页面跳转 web后台都会返回新的 html 文件。是整页刷新。特点：  首页加载时间短。因为页面的跳转只需要向服务器请求一个 html 文件，拿来展示就行。 有利于 seo 优化。因为搜索引擎可识别 html 文件内容，根据内容的权重对网页进行排名。  缺点：  页面间切换慢。因为页面的跳转会加载与之页面相关的全部资源 js、img等，如果网络不流畅，就会出现页面卡断">
+<meta name="twitter:description" content="单页应用 SPA单页应用：每次页面跳转不需要请求会 html 文件，它是通过 js 清除当前页面内容、重新挂载新的页面形成的。是局部刷新特点：  不需要请求新的 html 文件和重复的资源文件，减少 http 请求次数、降低请求延时，带来页面间切换快的特点。">
 
 
 
@@ -376,7 +376,18 @@
       
 
       
-        <h4 id="多页应用-MPA"><a href="#多页应用-MPA" class="headerlink" title="多页应用 MPA"></a>多页应用 MPA</h4><p>多页应用：每次页面跳转 <code>web</code>后台都会返回新的 <code>html</code> 文件。是整页刷新。<br>特点：</p>
+        <h4 id="单页应用-SPA"><a href="#单页应用-SPA" class="headerlink" title="单页应用 SPA"></a>单页应用 SPA</h4><p>单页应用：每次页面跳转不需要请求会 <code>html</code> 文件，它是通过 <code>js</code> 清除当前页面内容、重新挂载新的页面形成的。是局部刷新<br>特点：</p>
+<ul>
+<li>不需要请求新的 <code>html</code> 文件和重复的资源文件，减少 <code>http</code> 请求次数、降低请求延时，带来页面间切换快的特点。</li>
+</ul>
+<a id="more"></a>
+<p>缺点：</p>
+<ul>
+<li>首屏展示慢。需要请求 <code>html</code>、<code>js</code> 文件，当这些文件全部请求到时，才会展示页面。</li>
+<li><code>seo</code> 效果不好。因为单页面应用是靠 <code>js</code> 动态渲染产生的，而搜索引擎是不识别 <code>js</code> 文件的。</li>
+<li>解决以上单页面缺点的方式：服务器端渲染。</li>
+</ul>
+<h4 id="多页应用-MPA"><a href="#多页应用-MPA" class="headerlink" title="多页应用 MPA"></a>多页应用 MPA</h4><p>多页应用：每次页面跳转 <code>web</code>后台都会返回新的 <code>html</code> 文件。是整页刷新。<br>特点：</p>
 <ul>
 <li>首页加载时间短。因为页面的跳转只需要向服务器请求一个 <code>html</code> 文件，拿来展示就行。</li>
 <li>有利于 <code>seo</code> 优化。因为搜索引擎可识别 <code>html</code> 文件内容，根据内容的权重对网页进行排名。</li>
@@ -384,16 +395,6 @@
 <p>缺点：</p>
 <ul>
 <li>页面间切换慢。因为页面的跳转会加载与之页面相关的全部资源 <code>js</code>、<code>img</code>等，如果网络不流畅，就会出现页面卡断、白屏情况。</li>
-</ul>
-<h4 id="单页应用-SPA"><a href="#单页应用-SPA" class="headerlink" title="单页应用 SPA"></a>单页应用 SPA</h4><p>单页应用：每次页面跳转不需要请求会 <code>html</code> 文件，它是通过 <code>js</code> 清除当前页面内容、重新挂载新的页面形成的。是局部刷新<br>特点：</p>
-<ul>
-<li>不需要请求新的 <code>html</code> 文件和重复的资源文件，减少 <code>http</code> 请求次数、降低请求延时，带来页面间切换快的特点。</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>首屏展示慢。需要请求 <code>html</code>、<code>js</code> 文件，当这些文件全部请求到时，才会展示页面。</li>
-<li><code>seo</code> 效果不好。因为单页面应用是靠 <code>js</code> 动态渲染产生的，而搜索引擎是不识别 <code>js</code> 文件的。</li>
-<li>解决以上单页面缺点的方式：服务器端渲染。</li>
 </ul>
 
       
@@ -428,6 +429,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/18/Math对象/" rel="prev" title="Math对象">
+                Math对象 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -511,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -585,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#多页应用-MPA"><span class="nav-number">1.</span> <span class="nav-text">多页应用 MPA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单页应用-SPA"><span class="nav-number">2.</span> <span class="nav-text">单页应用 SPA</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#单页应用-SPA"><span class="nav-number">1.</span> <span class="nav-text">单页应用 SPA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多页应用-MPA"><span class="nav-number">2.</span> <span class="nav-text">多页应用 MPA</span></a></li></ol></div>
             
 
           </div>
