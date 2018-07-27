@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[css 盒模型]]></title>
+    <url>%2F2018%2F07%2F27%2Fcss-%E7%9B%92%E6%A8%A1%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[概念css 盒模型分为两类：标准盒模型（w3c盒模型）、怪异盒模型（IE盒模型）。 同：他们都有盒模型该有的基本属性 margin、border、padding、width、height等。异：计算宽高的方式不同。标准盒模型的宽高就是 content 的宽高；怪异盒模型的宽高不仅仅包含着 content 的宽高，还包含着 padding、border。 设置这两种盒模型通过 css3 新增属性 box-sizing 即可规定一个元素的盒模型。IE8+box-sizing: content-box 元素默认的盒模型。box-sizing: border-box 设置元素的盒模型是怪异盒模型。 获取盒模型的宽高 dom.style.width(height) 获取 dom 节点的内联样式的宽高。 (dom.currentStyle || window.getComputedStyle(dom)).width(height) 获取 dom 节点的宽高，不分元素样式的添加方式，前者兼容 ie、后者兼容主流浏览器。 dom.getBoundingClientRect() 获取包含着当前 dom 节点的位置（left、top、right、bottom）和宽高（width、height）的键值对儿。 注意：如果当前节点包含 padding、border，它获取的是总宽高。 IE9+ dom.clientWidth(height) 获取包含着 padding 的元素宽高。如果没 padding，就是内容宽高。 dom.offsetWidth(height) 获取包含着 padding 、border 的元素宽高。如果没 border，和上函数一样，也没 border 就是内容宽高。 实际使用情况对于一个给定的盒子，当你给它增加 padding、border 时候，却不想增加它的总宽高，就可以设置为怪异盒模型。在移动端用的居多。]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Math对象]]></title>
     <url>%2F2018%2F07%2F18%2FMath%E5%AF%B9%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[MathMath 对象是 js 提供的内置对象，挂载在 Math 对象的方法有时真的很有用。 几个常用 API Math.maxMath.max.apply(null, [1,2,10,2]) 求的数组中最大值 Math,minMath.min.apply(null, [1,2,10,2]) 类似地，求的数组中最小值 Math.floorMath.floor 向下取整（俗称地板函数） 注：parseInt、num | 0、num &gt;&gt; 0、~~num 也可向下取整num，和 Math.floor不同的是： Math.floor 是真正的向下取整，而其他则是直接去除 interval(小数) 的小数部分（因为0在内存中没有小数部分）； 对于 NaN、infinity 特殊数字向下取整的结果并不同； 12345let arr = [1.6, -2.2, .1, NaN, Infinity, '-1.7', '1.1']arr.forEach(v =&gt; &#123; console.log(Math.floor(v), v | 0, ~~v, v &gt;&gt; 0, parseInt(v))&#125;) Math.random 产生随机数（包含小数）。默认0-1；随机 [2, 5) Marh.random() * 3 + 2； Math.ceil 向上取整（俗称天花板函数） Math.abs 取绝对值 Math.sqrt 开平方 其他Math对象的API -&gt; w3c]]></content>
