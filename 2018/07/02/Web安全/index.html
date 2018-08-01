@@ -79,20 +79,19 @@
 
 
 
-<meta name="description" content="xssxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
+<meta name="description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web安全">
 <meta property="og:url" content="http://yoursite.com/2018/07/02/Web安全/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="xssxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
+<meta property="og:description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/07/02/Web安全/csrf.png">
-<meta property="og:image" content="http://yoursite.com/2018/07/02/Web安全/天猫控制台.png">
-<meta property="og:updated_time" content="2018-07-05T05:23:14.998Z">
+<meta property="og:updated_time" content="2018-07-31T10:55:27.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web安全">
-<meta name="twitter:description" content="xssxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
+<meta name="twitter:description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
 <meta name="twitter:image" content="http://yoursite.com/2018/07/02/Web安全/csrf.png">
 
 
@@ -379,28 +378,24 @@
       
 
       
-        <h3 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h3><p><code>xss</code>：<code>cross site scripting</code> 跨站脚本攻击。<br>攻击原理：攻击者向网页恶意植入 <code>html</code> 标签或者 <code>js</code> 脚本。比如：植入了表单提交 <code>html</code> 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 <code>js</code> 脚本，<code>js</code> 可获得用户的 <code>cookie</code> 信息。</p>
+        <h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><p><code>xss</code>：<code>cross site scripting</code> 跨站脚本攻击。<br>攻击原理：攻击者向网页恶意植入 <code>html</code> 标签或者 <code>js</code> 脚本。比如：植入了表单提交 <code>html</code> 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 <code>js</code> 脚本，<code>js</code> 可获得用户的 <code>cookie</code> 信息。</p>
 <a id="more"></a>
 <p>防范方法：</p>
 <ul>
-<li>限制用户提交内容的长度，也可以限定特定字符；</li>
-<li>对用户输入、提交的内容进行正则过滤、编码或者或者转码；</li>
-<li>加密传输重要内容；</li>
-<li>对于稍微重要的 <code>cookie</code> 信息给设置 <code>httpOnly</code> 属性，让前端 <code>js</code> 脚本不能获取 <code>cookie</code> 信息。</li>
+<li>编码：对用户上传的内容通过网页实体来编码。</li>
+<li>过滤：移除用户上传的 <code>dom</code> 属性，如 <code>onerrpr、onclick</code>等；过滤掉 <code>style</code>、<code>script</code>、<code>iframe</code> 标签等。</li>
 </ul>
-<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p><code>CSRF</code>：<code>Cross Site Request Forgery</code> 跨域请求伪造<br>攻击原理：伪装成站点用户进行攻击。攻击者通过盗用用户的身份信息，并以用户的名义发送恶意请求。<br><img src="/2018/07/02/Web安全/csrf.png" alt="csrf 原理"></p>
+<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p><code>CSRF</code>：<code>Cross Site Request Forgery</code> 跨站请求伪造<br>攻击原理：伪装成站点用户进行攻击。攻击者通过盗用用户的身份信息，并以用户的名义发送恶意请求。<br><img src="/2018/07/02/Web安全/csrf.png" alt="csrf 原理"></p>
 <p>防范方法：</p>
 <ul>
-<li>验证 <code>HTTP Referer</code> 字段。在 <code>HTTP</code> 头中有 <code>Referer</code> 字段记录该 <code>HTTP</code> 请求的来源地址，如果跳转的网站与来源地址相符，那就是合法的，如果不符则可能是 <code>csrf</code> 攻击，拒绝该请求。因为通常来说，Referer字段应和请求的地址位于同一域名下。</li>
-<li>在 <code>http</code> 请求头中加入 <code>token</code>。<ul>
+<li><code>Referer</code> 验证。 <code>HTTP Referer</code> 字段。在 <code>HTTP</code> 头中有 <code>Referer</code> 字段记录该 <code>HTTP</code> 请求的来源地址，如果跳转的网站与来源地址相符，那就是合法的，如果不符则可能是 <code>csrf</code> 攻击，拒绝该请求。因为通常来说，<code>Referer</code> 字段应和请求的地址位于同一域名下。</li>
+<li><code>Token</code> 验证。在 <code>http</code> 请求头中加入 <code>token</code>。<ul>
 <li>这种的话在请求的时候加一个 <code>token</code>，值可以是随机产生的一段数字，<code>token</code> 是存入数据库之后，后台返给客户端的，如果客户端再次登录的时候，后台发现 <code>token</code> 没有，或者通过查询数据库不正确，那么就拒绝该请求。</li>
 <li>如果想防止一个账号避免在不同的机器上登录，那么我们就可以通过 <code>token</code> 来判断，如果a机器登录后，我们就将用户的 <code>token</code> 从数据库清除，从新生成，那么另外一台b机器在执行操作的时候，<code>token</code> 就失效了，只能重新登录，这样就可以防止两台机器登同一账号。</li>
 </ul>
 </li>
 </ul>
-<h3 id="控制台注入代码"><a href="#控制台注入代码" class="headerlink" title="控制台注入代码"></a>控制台注入代码</h3><p>黑客诱骗用户去浏览器控制台粘贴东西实现植入 <code>js</code> 脚本。和 <code>xss</code> 攻击原理差不多的。<br>例子天猫商城：<br><img src="/2018/07/02/Web安全/天猫控制台.png" alt="天猫控制台"></p>
-<h3 id="钓鱼"><a href="#钓鱼" class="headerlink" title="钓鱼"></a>钓鱼</h3><p>原理：伪装正常网站样式，让用户输入用户名、密码等个人隐私信息。或者跳转非法的雷同页面。<br>比如：在危险网站上蹦出来一个 <code>qq</code> 登陆，做得和官网上一模一样，如果用户不看域名的化，直接输入信息就会导致信息丢失；在正确域名下输入信息，通过植入 <code>js</code> 代码，把网页链接变为非法网站，这个非法网站和合法网站及其类似（这有点像 <code>xss</code>）。</p>
-<h3 id="网页验证码"><a href="#网页验证码" class="headerlink" title="网页验证码"></a>网页验证码</h3><p>验证码出现的目的：证明当前登陆站点的是个人，并不是通过暴力破解实现登陆、注册的机器。</p>
+<p><code>XSS</code>和<code>CSRF</code>的区别：<br><code>XSS</code> 是用户向你的网站注入 <code>js</code> 脚本，运行其中的函数、代码等。<code>CSRF</code> 是利用网站漏洞来执行一些接口，并且是基于用户登陆的。</p>
 
       
     </div>
@@ -521,7 +516,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -595,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制台注入代码"><span class="nav-number">3.</span> <span class="nav-text">控制台注入代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钓鱼"><span class="nav-number">4.</span> <span class="nav-text">钓鱼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网页验证码"><span class="nav-number">5.</span> <span class="nav-text">网页验证码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS"><span class="nav-number">1.</span> <span class="nav-text">XSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a></li></ol></div>
             
 
           </div>
