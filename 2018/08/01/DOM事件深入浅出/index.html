@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。 12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;  DOM2：使">
+<meta name="description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DOM事件深入浅出">
 <meta property="og:url" content="http://yoursite.com/2018/08/01/DOM事件深入浅出/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。 12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;  DOM2：使">
+<meta property="og:description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/08/01/DOM事件深入浅出/捕获、冒泡.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/08/01/DOM事件深入浅出/myEvent.png">
-<meta property="og:updated_time" content="2018-08-01T11:41:07.660Z">
+<meta property="og:updated_time" content="2018-08-01T11:55:26.557Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM事件深入浅出">
-<meta name="twitter:description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。 12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;  DOM2：使">
+<meta name="twitter:description" content="DOM 事件级别 DOM0：将一个函数赋值给 DOM 节点的事件处理属性。缺点：对于 DOM 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。12345var oBox = document.querySelector(&apos;div&apos;);oBox.onclick = function () &amp;#123;  console.log(&apos;hahaha!&apos;);&amp;#125;;">
 <meta name="twitter:image" content="http://yoursite.com/2018/08/01/DOM事件深入浅出/捕获、冒泡.jpg">
 
 
@@ -380,9 +380,11 @@
 
       
         <h4 id="DOM-事件级别"><a href="#DOM-事件级别" class="headerlink" title="DOM 事件级别"></a>DOM 事件级别</h4><ul>
-<li><p><code>DOM0</code>：将一个函数赋值给 <code>DOM</code> 节点的事件处理属性。<br>缺点：对于 <code>DOM</code> 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oBox = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">oBox.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hahaha!'</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li><code>DOM0</code>：将一个函数赋值给 <code>DOM</code> 节点的事件处理属性。<br>缺点：对于 <code>DOM</code> 节点的同一种事件处理，不能给它绑定多个函数。否则，后者会覆盖前者。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oBox = <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">oBox.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hahaha!'</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p><code>DOM2</code>：使用 <code>addEventListener | attachEvent</code> 形式给 <code>DOM</code> 节点注册事件。<br><strong>注意</strong>：主流浏览器用 <code>addEventListener/removeEventListener</code>，<code>IE8-</code>使用 <code>attachEvent/detachEvent</code>注册/注销事件，它们在传参上略有差别。 </p>
 <ol>
 <li>主流浏览器有事件捕获，<code>IE8-</code> 没有，只有事件冒泡，也就是说使用 <code>attachEvent/detachEvent</code> 不需要传第三个参数；</li>
