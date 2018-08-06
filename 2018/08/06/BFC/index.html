@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;  BFC 的特性（原理） BFC 内部元素">
+<meta name="description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BFC">
 <meta property="og:url" content="http://yoursite.com/2018/08/06/BFC/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;  BFC 的特性（原理） BFC 内部元素">
+<meta property="og:description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/08/06/BFC/浮动带来的问题.png">
 <meta property="og:image" content="http://yoursite.com/2018/08/06/BFC/bfc解决浮动带来的问题.png">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="http://yoursite.com/2018/08/06/BFC/bfc解决边距合并.png">
 <meta property="og:image" content="http://yoursite.com/2018/08/06/BFC/浮动带来父元素坍塌.png">
 <meta property="og:image" content="http://yoursite.com/2018/08/06/BFC/bfc解决浮动带来父元素坍塌.png">
-<meta property="og:updated_time" content="2018-08-06T05:12:09.041Z">
+<meta property="og:updated_time" content="2018-08-06T05:14:13.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BFC">
-<meta name="twitter:description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;  BFC 的特性（原理） BFC 内部元素">
+<meta name="twitter:description" content="BFC 概念BFC：block format context 块级格式化上下文。BFC 规定了该元素及其子元素的行为和 BFC 外部元素之间的关系。 BFC 的创建 overflow：是 auto | hidden 浮动。float 不是 none 定位。position 是 absolute | fixed 弹性盒子。设置 display: flex;">
 <meta name="twitter:image" content="http://yoursite.com/2018/08/06/BFC/浮动带来的问题.png">
 
 
@@ -390,6 +390,7 @@
 <li>定位。<code>position</code> 是 <code>absolute | fixed</code></li>
 <li>弹性盒子。设置 <code>display: flex;</code></li>
 </ul>
+<a id="more"></a>
 <h4 id="BFC-的特性（原理）"><a href="#BFC-的特性（原理）" class="headerlink" title="BFC 的特性（原理）"></a>BFC 的特性（原理）</h4><ol>
 <li><code>BFC</code> 内部元素和 <code>BFC</code> 外部元素互不影响。基于这个特性可以解决: 外边距重叠、<code>float</code> 带来的影响等问题。</li>
 <li><code>BFC</code> 整体高度的计算会把浮动的子元素高度，也计算进去。可以实现清除浮动。</li>
