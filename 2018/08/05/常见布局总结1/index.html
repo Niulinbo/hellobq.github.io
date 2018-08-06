@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
+<meta name="description" content="左右宽度固定、中间自适应float思想：左右盒子分别 float，中间的盒子会占据前两个浮动盒子的位置，再给中间盒子左右 margin。优缺点：  兼容性好 浮动的元素脱离文档流，处理不好会影响其他元素。">
 <meta name="keywords" content="前端博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Web安全">
-<meta property="og:url" content="http://yoursite.com/2018/07/02/Web安全/index.html">
+<meta property="og:title" content="常见布局总结1">
+<meta property="og:url" content="http://yoursite.com/2018/08/05/常见布局总结1/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
+<meta property="og:description" content="左右宽度固定、中间自适应float思想：左右盒子分别 float，中间的盒子会占据前两个浮动盒子的位置，再给中间盒子左右 margin。优缺点：  兼容性好 浮动的元素脱离文档流，处理不好会影响其他元素。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/07/02/Web安全/csrf.png">
-<meta property="og:updated_time" content="2018-07-31T10:55:27.426Z">
+<meta property="og:updated_time" content="2018-08-05T13:25:05.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Web安全">
-<meta name="twitter:description" content="XSSxss：cross site scripting 跨站脚本攻击。攻击原理：攻击者向网页恶意植入 html 标签或者 js 脚本。比如：植入了表单提交 html 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 js 脚本，js 可获得用户的 cookie 信息。">
-<meta name="twitter:image" content="http://yoursite.com/2018/07/02/Web安全/csrf.png">
+<meta name="twitter:title" content="常见布局总结1">
+<meta name="twitter:description" content="左右宽度固定、中间自适应float思想：左右盒子分别 float，中间的盒子会占据前两个浮动盒子的位置，再给中间盒子左右 margin。优缺点：  兼容性好 浮动的元素脱离文档流，处理不好会影响其他元素。">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/02/Web安全/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/05/常见布局总结1/"/>
 
 
 
 
 
-  <title>Web安全 | It's not easy</title>
+  <title>常见布局总结1 | It's not easy</title>
   
 
 
@@ -279,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/02/Web安全/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/05/常见布局总结1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="It's not easy">
@@ -296,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Web安全</h1>
+          <h1 class="post-title" itemprop="name headline">常见布局总结1</h1>
         
 
         <div class="post-meta">
@@ -308,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-02T14:42:20+08:00">
-                2018-07-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-05T19:45:48+08:00">
+                2018-08-05
               </time>
             
 
@@ -331,8 +329,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web安全/" itemprop="url" rel="index">
-                    <span itemprop="name">Web安全</span>
+                  <a href="/categories/h5/" itemprop="url" rel="index">
+                    <span itemprop="name">h5</span>
                   </a>
                 </span>
 
@@ -349,8 +347,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/02/Web安全/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/02/Web安全/" itemprop="commentCount"></span>
+                <a href="/2018/08/05/常见布局总结1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/05/常见布局总结1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -378,24 +376,39 @@
       
 
       
-        <h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><p><code>xss</code>：<code>cross site scripting</code> 跨站脚本攻击。<br>攻击原理：攻击者向网页恶意植入 <code>html</code> 标签或者 <code>js</code> 脚本。比如：植入了表单提交 <code>html</code> 代码，当用户提交时，目标服务器是攻击者的服务器，而不是用户原以为的信任站点；植入的 <code>js</code> 脚本，<code>js</code> 可获得用户的 <code>cookie</code> 信息。</p>
+        <h4 id="左右宽度固定、中间自适应"><a href="#左右宽度固定、中间自适应" class="headerlink" title="左右宽度固定、中间自适应"></a>左右宽度固定、中间自适应</h4><h5 id="float"><a href="#float" class="headerlink" title="float"></a>float</h5><p>思想：左右盒子分别 <code>float</code>，中间的盒子会占据前两个浮动盒子的位置，再给中间盒子左右 <code>margin</code>。<br>优缺点：</p>
+<ul>
+<li>兼容性好</li>
+<li>浮动的元素脱离文档流，处理不好会影响其他元素。</li>
+</ul>
 <a id="more"></a>
-<p>防范方法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #wrap div &#123; min-height: 600px; &#125;</span></span><br><span class="line"><span class="undefined">  .left &#123;</span></span><br><span class="line"><span class="undefined">    float: left;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: pink;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .right &#123;</span></span><br><span class="line"><span class="undefined">    float: right;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: green;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .center &#123;</span></span><br><span class="line"><span class="undefined">    margin: 0 300px;</span></span><br><span class="line"><span class="undefined">    background: skyblue;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h5><p>思想：左右盒子定牢固，中间盒子给定<code>left</code>、<code>right</code>，就规定了子元素在父元素的左右间距，也就控制了子元素的宽度。<br>优缺点：</p>
 <ul>
-<li>编码：对用户上传的内容通过网页实体来编码。</li>
-<li>过滤：移除用户上传的 <code>dom</code> 属性，如 <code>onerrpr、onclick</code>等；过滤掉 <code>style</code>、<code>script</code>、<code>iframe</code> 标签等。</li>
+<li>快捷。无论是 <code>css</code> 布局还是 <code>js</code> 操作定位的元素，都是非常快的。</li>
+<li>确定和浮动类似。盒子脱离文档流，它的子元素也会脱离文档流。</li>
 </ul>
-<h3 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h3><p><code>CSRF</code>：<code>Cross Site Request Forgery</code> 跨站请求伪造<br>攻击原理：伪装成站点用户进行攻击。攻击者通过盗用用户的身份信息，并以用户的名义发送恶意请求。<br><img src="/2018/07/02/Web安全/csrf.png" alt="csrf 原理"></p>
-<p>防范方法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #wrap &#123;</span></span><br><span class="line"><span class="undefined">    position: relative;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  #wrap div &#123;</span></span><br><span class="line"><span class="undefined">    position: absolute;</span></span><br><span class="line"><span class="undefined">    min-height: 300px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .left &#123;</span></span><br><span class="line"><span class="undefined">    left: 0;</span></span><br><span class="line"><span class="undefined">    top: 0;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: pink;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .right &#123;</span></span><br><span class="line"><span class="undefined">    top: 0;</span></span><br><span class="line"><span class="undefined">    right: 0;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: green;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .center &#123;</span></span><br><span class="line"><span class="undefined">    left: 300px;</span></span><br><span class="line"><span class="undefined">    right: 300px;</span></span><br><span class="line"><span class="undefined">    background: skyblue;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"wrap"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="flex-弹性盒子"><a href="#flex-弹性盒子" class="headerlink" title="flex 弹性盒子"></a>flex 弹性盒子</h5><p>思想：给子元素设置为盒子模型，那么其所有子元素在同一行。此时左右两个子元素宽度固定，中间盒子设置 <code>flex: 1</code> 占据父元素所有的剩余空间。<br>我认为 <code>flex</code> 布局是最好的，兼容 <code>IE10+</code>（需要写 <code>-ms-</code>前缀）且快捷、能解决元素脱离文档流的问题。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #flex &#123;</span></span><br><span class="line"><span class="undefined">    display: flex;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  #flex div &#123;</span></span><br><span class="line"><span class="undefined">    min-height: 300px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .left &#123;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: pink;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .right &#123;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: green;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .center &#123;</span></span><br><span class="line"><span class="undefined">    flex: 1;</span></span><br><span class="line"><span class="undefined">    background: skyblue;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"flex"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="table-cell-表格布局"><a href="#table-cell-表格布局" class="headerlink" title="table-cell 表格布局"></a>table-cell 表格布局</h5><p>思想：把父元素设置为 <code>table</code>，规定表格的宽高（宽和屏幕一样宽）。子元素设置为 <code>table-cell</code>，左右两边盒子宽度固定，中间自适应（这点和弹性盒子类似）。<br>优缺点：</p>
 <ul>
-<li><code>Referer</code> 验证。 <code>HTTP Referer</code> 字段。在 <code>HTTP</code> 头中有 <code>Referer</code> 字段记录该 <code>HTTP</code> 请求的来源地址，如果跳转的网站与来源地址相符，那就是合法的，如果不符则可能是 <code>csrf</code> 攻击，拒绝该请求。因为通常来说，<code>Referer</code> 字段应和请求的地址位于同一域名下。</li>
-<li><code>Token</code> 验证。在 <code>http</code> 请求头中加入 <code>token</code>。<ul>
-<li>这种的话在请求的时候加一个 <code>token</code>，值可以是随机产生的一段数字，<code>token</code> 是存入数据库之后，后台返给客户端的，如果客户端再次登录的时候，后台发现 <code>token</code> 没有，或者通过查询数据库不正确，那么就拒绝该请求。</li>
-<li>如果想防止一个账号避免在不同的机器上登录，那么我们就可以通过 <code>token</code> 来判断，如果a机器登录后，我们就将用户的 <code>token</code> 从数据库清除，从新生成，那么另外一台b机器在执行操作的时候，<code>token</code> 就失效了，只能重新登录，这样就可以防止两台机器登同一账号。</li>
+<li>兼容性很好</li>
+<li>不好操作，对 <code>seo</code> 也不好。一个单元格高度变化，其他单元格高度也一样（牵一发动全身）。</li>
 </ul>
-</li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #table &#123;</span></span><br><span class="line"><span class="undefined">    display: table;</span></span><br><span class="line"><span class="undefined">    width: 100%;</span></span><br><span class="line"><span class="undefined">    height: 300px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  #table div &#123;</span></span><br><span class="line"><span class="undefined">    display: table-cell;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .left &#123;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: pink;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .right &#123;</span></span><br><span class="line"><span class="undefined">    width: 300px;</span></span><br><span class="line"><span class="undefined">    background: green;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .center &#123;</span></span><br><span class="line"><span class="undefined">    background: skyblue;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"table"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="Gird-网格布局"><a href="#Gird-网格布局" class="headerlink" title="Gird 网格布局"></a>Gird 网格布局</h5><p>思想：只要给父元素设置一个网格布局属性即可规定子元素的行为。比如 <code>gird</code>、<code>gird-template-rows</code>、<code>gird-template-columns</code>。<br>优缺点：</p>
+<ul>
+<li>代码量很少。</li>
+<li>不兼容 <code>IE</code></li>
 </ul>
-<p><code>XSS</code>和<code>CSRF</code>的区别：<br><code>XSS</code> 是用户向你的网站注入 <code>js</code> 脚本，运行其中的函数、代码等。<code>CSRF</code> 是利用网站漏洞来执行一些接口，并且是基于用户登陆的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #grid &#123;</span></span><br><span class="line"><span class="undefined">    display: grid;</span></span><br><span class="line"><span class="undefined">    /* 像table一样，需要手动设置父元素宽度 */</span></span><br><span class="line"><span class="undefined">    width: 100%;</span></span><br><span class="line"><span class="undefined">    /* 规定网格布局的高度 */</span></span><br><span class="line"><span class="undefined">    grid-template-rows: 300px;</span></span><br><span class="line"><span class="undefined">    /* 规定子元素的宽度分布 */</span></span><br><span class="line"><span class="undefined">    grid-template-columns: 300px auto 300px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .left &#123;</span></span><br><span class="line"><span class="undefined">    background: pink;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .right &#123;</span></span><br><span class="line"><span class="undefined">    background: green;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .center &#123;</span></span><br><span class="line"><span class="undefined">    background: skyblue;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"grid"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"center"</span>&gt;</span>center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>思考</strong>：根据以上经验，也可以对上下高度固定、中间自适应布局，有了解决方案：</p>
+<ul>
+<li>定位</li>
+<li>弹性盒子 <code>flex</code></li>
+<li>网格布局 <code>grid</code></li>
+</ul>
 
       
     </div>
@@ -420,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/30/typescript声明变量及解构/" rel="next" title="typescript声明变量及解构">
-                <i class="fa fa-chevron-left"></i> typescript声明变量及解构
+              <a href="/2018/08/03/浏览器doctype、渲染原理、性能优化/" rel="next" title="浏览器doctype、渲染原理、性能优化">
+                <i class="fa fa-chevron-left"></i> 浏览器doctype、渲染原理、性能优化
               </a>
             
           </div>
@@ -430,8 +443,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/03/我对前端工程化、模块化、组件化的理解/" rel="prev" title="我对前端工程化、模块化、组件化的理解">
-                我对前端工程化、模块化、组件化的理解 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/05/常见布局总结2/" rel="prev" title="常见布局总结2">
+                常见布局总结2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -590,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#XSS"><span class="nav-number">1.</span> <span class="nav-text">XSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#左右宽度固定、中间自适应"><span class="nav-number">1.</span> <span class="nav-text">左右宽度固定、中间自适应</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#float"><span class="nav-number">1.1.</span> <span class="nav-text">float</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定位"><span class="nav-number">1.2.</span> <span class="nav-text">定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#flex-弹性盒子"><span class="nav-number">1.3.</span> <span class="nav-text">flex 弹性盒子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#table-cell-表格布局"><span class="nav-number">1.4.</span> <span class="nav-text">table-cell 表格布局</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Gird-网格布局"><span class="nav-number">1.5.</span> <span class="nav-text">Gird 网格布局</span></a></li></ol></li></ol></div>
             
 
           </div>
