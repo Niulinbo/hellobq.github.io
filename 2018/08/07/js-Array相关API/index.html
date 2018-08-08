@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="前端开发者的博客，记录我的学习历程">
+<meta name="description" content="数组常用属性 .constructor 返回对 Array 构造函数的引用。 .length 返回当前数组的长度。">
 <meta name="keywords" content="前端博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="It&#39;s not easy">
-<meta property="og:url" content="http://yoursite.com/categories/css/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-Array相关API">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/js-Array相关API/index.html">
 <meta property="og:site_name" content="It&#39;s not easy">
-<meta property="og:description" content="前端开发者的博客，记录我的学习历程">
+<meta property="og:description" content="数组常用属性 .constructor 返回对 Array 构造函数的引用。 .length 返回当前数组的长度。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-08T05:34:48.813Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="It&#39;s not easy">
-<meta name="twitter:description" content="前端开发者的博客，记录我的学习历程">
+<meta name="twitter:title" content="js-Array相关API">
+<meta name="twitter:description" content="数组常用属性 .constructor 返回对 Array 构造函数的引用。 .length 返回当前数组的长度。">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/css/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/07/js-Array相关API/"/>
 
 
 
 
 
-  <title>分类: css | It's not easy</title>
+  <title>js-Array相关API | It's not easy</title>
   
 
 
@@ -144,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -262,55 +263,217 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>css<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/07/js-Array相关API/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="It's not easy">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="It's not easy">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/27/css-盒模型/" itemprop="url">
-              
-                <span itemprop="name">css 盒模型</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">js-Array相关API</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-27T22:42:31+08:00"
-              content="2018-07-27" >
-          07-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-07T23:50:13+08:00">
+                2018-08-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/07/js-Array相关API/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/07/js-Array相关API/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="数组常用属性"><a href="#数组常用属性" class="headerlink" title="数组常用属性"></a>数组常用属性</h4><ul>
+<li><code>.constructor</code> 返回对 <code>Array</code> 构造函数的引用。</li>
+<li><code>.length</code> 返回当前数组的长度。</li>
+</ul>
+<a id="more"></a>
+<h4 id="数组常用的方法"><a href="#数组常用的方法" class="headerlink" title="数组常用的方法"></a>数组常用的方法</h4><ul>
+<li><code>arrName[index]</code> 通过索引访问项。当访问的索引 &gt;= 数组长度时，返回 <code>undefined</code>；当给索引 &gt;= 数组长度的项赋值时，会改变原来数组的长度。</li>
+<li><code>.push(n1[, n2])</code> 在数组尾部向数组插入 <code>n1...</code> 项，返回数组新长度。</li>
+<li><code>.unshift(n1[, n2])</code> 作用同上，不过是在数组头部插入。</li>
+<li><code>.pop()</code> 从数组尾部删除某个元素。返回被删除一项。</li>
+<li><code>.shift()</code> 作用同上，不过是从数组头部删除一项。</li>
+<li><code>.splice(index, n[, n1, n2])</code> 有删除、替换、增加功能。从索引为 <code>index</code> 位置开始删除 <code>n</code> 个，然后在索引 <code>index</code> 后增加 <code>n1, n2....</code> 这些项。如果 <code>n=0</code> ，就是不删除，只是往数组内增加项。如果n和后面选项个数相同，就是替换。如果没有后边的选项，就是简单的删除。返回删除项组成的数组。</li>
+<li><code>.reverse()</code> 将数组反转。返回反转后的数组。</li>
+<li><code>.concat(arr[, n1, n2])</code> 数组合并返回新的数组。源数组未变。 <strong>注意</strong>：参数是一维数组还是单个项都会被解析出来。</li>
+<li><code>.join([str])</code> 数组的项以某个字符串 <code>str</code> 连接成一个字符串。无参数，默认 <code>str = &#39;,&#39;</code></li>
+<li><code>.forEach(fn)</code> 遍历数组。无返回值。回调函数中的参数分别为：<code>item</code> 项，<code>index</code> 索引，<code>array</code> 当前数组。</li>
+<li><code>.map(fn)</code> 作用同上。返回一个由回调函数返回值组成的数组。<strong>注意</strong>：回调函数不写返回值，默认返回 <code>undefined</code> 的。</li>
+<li><code>.every(fn)</code> 遍历数组，用来判断数组每个元素是否都符合某个条件。如果回调中有一个返回 <code>false</code>，那么这个函数就返回 <code>false</code>。</li>
+<li><code>.some(fn)</code> 遍历数组，用来判断数组每个元素是否符合某个条件。如果回调返回值中有一个返回 <code>true</code> ，则这个函数就返回 <code>true</code>。</li>
+<li><code>.filter(fn)</code> 遍历数组。返回回调函数 <code>fn</code> 返回值为 <code>true</code>的项的集合，即返回符合条件的项组成的数组。</li>
+<li><code>.reduce(fn)</code> 为数组的每一项执行回掉函数。它很有用，主要是它第二个可选传参的使用。</li>
+<li><code>.sort(fn)</code> 没有回调则是按照 <code>ASCII</code> 码排序。有回调，则是对具体项的比较。</li>
+</ul>
+<h4 id="es6-对数组的新增"><a href="#es6-对数组的新增" class="headerlink" title="es6 对数组的新增"></a>es6 对数组的新增</h4><ul>
+<li><code>Array.of()</code> 新增创建数组的静态方法，解决之前数组的创建受它参数影响的限制。</li>
+<li><code>Array.from(arrName, fn)</code> 将类数组转换成数组，回调函数中的参数及作用类似 <code>forEach</code> 的回调函数。返回一个数组。</li>
+<li><p><code>.find(fn(value, index, array))</code> 找出第一个满足条件的项。<br>它可以根据条件返回具体的项，而  <code>indexOf</code> 必须要实现知道这一项。另外，它也可以弥补 <code>indexOf</code> 的不足。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="literal">NaN</span>].indexOf(<span class="literal">NaN</span>)   <span class="number">-1</span></span><br><span class="line">[<span class="literal">NaN</span>].find(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">Object</span>.is(item, <span class="literal">NaN</span>))  <span class="literal">NaN</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>.findIndex(fn(value, index, array))</code> 找出第一个满足条件项的索引。 </p>
+</li>
+<li><code>.fill(num)</code> 返回被 <code>num</code> 填充的数组，<code>num</code>还可以是字符串、<code>json</code> 等数据格式。</li>
+<li><code>...arrName</code> 扩展运算符，这样很容将数组内容扣出来。</li>
+</ul>
+<h4 id="需要注意的问题"><a href="#需要注意的问题" class="headerlink" title="需要注意的问题"></a>需要注意的问题</h4><ul>
+<li>数组遍历除了以上原生 <code>API</code>以外，还可以使用 <code>for...of</code> ，因为数组的原型实现了 <code>interator</code> 接口。</li>
+<li><code>forEach</code> 遍历数组中途不能 <code>break</code>。可以使用 <code>es6</code> 中的 <code>for...of</code>，它可以途中 <code>break</code>。</li>
+</ul>
+<h4 id="数组的判定"><a href="#数组的判定" class="headerlink" title="数组的判定"></a>数组的判定</h4><ul>
+<li><code>Array.isArray(arrName)</code> 不兼容 <code>IE8-</code></li>
+<li><code>arrName.constrcutor === Array</code> 利用圆型链的特性。</li>
+<li><code>({}).toString.call(arrName) = &#39;[object Array]&#39;</code> 利用数组原型继承了对象原型的 <code>toString</code> 方法。</li>
+<li>使用 <code>instanceof</code> 判断，在多窗口下会失效。</li>
+<li>使用数组独一无二 <code>API</code>：<code>!!arr.sort  !!arr.slice  !!arr.join  !!arr.splice</code> 兼容 <code>IE8-</code>且简洁。推荐</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/07/js-String相关API/" rel="next" title="js-String相关API">
+                <i class="fa fa-chevron-left"></i> js-String相关API
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -318,6 +481,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -338,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -422,6 +601,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组常用属性"><span class="nav-number">1.</span> <span class="nav-text">数组常用属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组常用的方法"><span class="nav-number">2.</span> <span class="nav-text">数组常用的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#es6-对数组的新增"><span class="nav-number">3.</span> <span class="nav-text">es6 对数组的新增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#需要注意的问题"><span class="nav-number">4.</span> <span class="nav-text">需要注意的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组的判定"><span class="nav-number">5.</span> <span class="nav-text">数组的判定</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -559,6 +754,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
