@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{55:function(n,e,t){"use strict";t.r(e);var a=t(0),u=t.n(a);e.default=function(n){return u.a.createElement("div",null,u.a.createElement("p",null,"NewHand \u9875\u9762!"))}}}]);
-//# sourceMappingURL=3.b8778263.chunk.js.map

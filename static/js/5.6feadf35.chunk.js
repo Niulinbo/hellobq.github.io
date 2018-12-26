@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{57:function(e,n,a){"use strict";a.r(n);var t=a(0),l=a.n(t);n.default=function(e){return l.a.createElement("div",null,l.a.createElement("p",null,"leave_message \u9875\u9762!"))}}}]);
-//# sourceMappingURL=5.6feadf35.chunk.js.map
