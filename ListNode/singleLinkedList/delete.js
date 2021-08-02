@@ -1,5 +1,7 @@
 /**
  * 删除值/址
+ * 
+ * refs: https://blog.csdn.net/hollis_chuang/article/details/102480657
  */
 const deleteByVal = (head, val) => {
   if (!head) return null

@@ -1,4 +1,6 @@
-// 链表转数组（迭代）
+/**
+ * 链表转数组：迭代、递归
+ */
 const toArrayByIteration = (head) => {
   const arr = []
   while (head) {
@@ -8,7 +10,6 @@ const toArrayByIteration = (head) => {
   return arr
 }
 
-// 链表转数组（递归）
 const toArrayByRecursion = (head) => {
   const arr = []
 
