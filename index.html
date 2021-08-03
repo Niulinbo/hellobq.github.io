@@ -3,8 +3,37 @@
 	<head>
 		<meta charset="utf-8">
 		<title>title</title>
+		<style>
+			.container {
+				width: 200px;
+				background-color: aliceblue;
+				font-size: 0;
+			}
+			.box {
+				display: inline-block;
+				/* width: 100px; */
+				padding: 0 20px;
+				height: 100px;
+				background-color: red;
+				font-size: 12px;
+			}
+			.box1 {
+				height: 200px;
+			}
+		</style>
 	</head>
 	<body>
-		hellobq.github.io
+		<div class="container">
+			<div class="box box1">左</div>
+			<!-- commit -->
+			<div class="box">右</div>
+		</div>
 	</body>
+
+	<script>
+		console.log(
+			document.querySelector('.container').childNodes,
+			document.querySelector('.container').children
+		)
+	</script>
 </html>
