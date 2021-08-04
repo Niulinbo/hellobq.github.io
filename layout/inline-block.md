@@ -64,7 +64,7 @@ children 和 childNodes 差别：https://www.cnblogs.com/snandy/archive/2011/03/
 }
 ```
 
-![inline-block-baseline](./imgs/inline-block-baseline.jpg)
+![vertical-align-baseline](./imgs/vertical-align-baseline.jpg)
 
 因为 inline-block box 垂直对其方式 vertical-align 是 baseline （基线）导致的。第一个 box 的 baseline 是文字 "左" 的 baseline，第二个 box 这是下边框。
 
@@ -78,7 +78,7 @@ children 和 childNodes 差别：https://www.cnblogs.com/snandy/archive/2011/03/
 }
 ```
 
-![inline-block-vertical-align-top](./imgs/inline-block-vertical-align-top.jpg)
+![vertical-align-top](./imgs/vertical-align-top.jpg)
 
 
 ### refs
