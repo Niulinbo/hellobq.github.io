@@ -5,68 +5,28 @@
 		<title>title</title>
 		<style>
 			.container {
-				width: 200px;
+				width: 240px;
 				background-color: aliceblue;
-				font-size: 0;
+			}
+			.container::after {
+				content: '';
+				display: block;
+				clear: both;
 			}
 			.box {
-				display: inline-block;
 				width: 100px;
 				height: 100px;
 				background-color: red;
-				font-size: 12px;
-				vertical-align: top;
-				overflow-x: auto;
-			}
-			.box1 {
-				margin-left: -50px;
-				height: 200px;
-			}
-			.box2 {
-				background-color: purple;
+				float: left;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<div class="box box1">左</div>
-			<div class="box box2"></div>
+			<div class="box"></div>
 		</div>
-		<a download href="#">
-			<img src="https://avatar-static.segmentfault.com/907/368/907368143-59924ba3762d6_huge128" alt="">
-		</a>
-		<pre>
-			mp3.mp3
-		</pre>
 	</body>
 
 	<script>
-		console.log(
-			document.querySelector('.container').childNodes,
-			document.querySelector('.container').children
-		)
-
-		// download('https://avatar-static.segmentfault.com/907/368/907368143-59924ba3762d6_huge128')
-		function download(url) {
-			const xhr = new XMLHttpRequest()
-			xhr.open('GET', url)
-			xhr.send()
-			xhr.responseType = 'blob'
-			xhr.onload = function (e) {
-				console.log(e, xhr.response)
-				const fileName = 'demo.png'
-				downloadImg(fileName, xhr.response)
-			}
-		}
-
-		function downloadImg(fileName, blob) {
-			const link = document.createElement('a')
-			let blobUrl = window.URL.createObjectURL(blob)
-			link.download = fileName
-			link.href = blobUrl
-			link.click()
-			link.remove()
-			window.URL.revokeObjectURL(blobUrl)
-		}
 	</script>
 </html>
