@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.wrap{
+  min-width: 600px;
+}
+#header, #footer{
+  height: 50px;
+  width: 100%;
+  background:grey;
+}
+#content {
+  /* 形成 bfc */
+  padding: 0 200px;
+  overflow: hidden;
+}
+
+#left, #middle, #right{
+  float: left;
+  height: 200px;
+}
+#left, #right {
+  width: 200px;
+  background: green;
+}
+#middle {
+  background: pink;
+  width: 100%;
+  overflow: auto;
+}
+#left {
+  margin-left: calc(-100% + -200px);
+  /* position: relative;
+  left: -200px; */
+}
+#right {
+  margin-left: -200px;
+  /* position: relative;
+  right: -200px; */
+}
+#middle .inner-middle {
+  margin: 0 200px;
+}
+/* .middle-inner{
+  margin: 0 200px;
+} */
