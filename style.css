@@ -10,27 +10,24 @@ body {
 .wrap {
   min-width: 600px;
   background-color: azure;
-  display: table;
-  width: 100%;
-}
-
-.wrap > div {
-  display: table-cell;
+  display: flex;
 }
 
 #left {
-  width: 100px;
+  order: -1;
+  flex: 0 0 100px;
   height: 200px;
   background-color: aqua;
 }
 
 #right {
-  width: 200px;
+  flex: 0 0 200px;
   height: 300px;
   background-color: bisque;
 }
 
 #middle {
+  flex: 1;
   height: 100px;
   background-color: blueviolet;
 }
