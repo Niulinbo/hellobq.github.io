@@ -1,5 +1,5 @@
 ## querystring
-[querystring](https://github.com/jgallen23/querystring) 
+[querystring](https://github.com/jgallen23/querystring/blob/master/lib/querystring.js)
 
 parse 方法：
 - 获取 url 参数和转换成 url 参数；
@@ -19,8 +19,8 @@ querystring.stringify({ foo: 'bar', baz: ['qux', 'quux'], corge: '' })
 ``` javascript
 (function (ctx) {
   /**
-   * decodeURIComponent encodeURIComponent 可能跑出格式化错误
-   * 类属性信息，判断变量类型
+   * decodeURIComponent encodeURIComponent 可能抛出格式化错误 (https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent#%E5%BC%82%E5%B8%B8)
+   * 通过类属性信息，判断变量类型
   */
   function encode(str) {
     try {
