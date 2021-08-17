@@ -62,7 +62,7 @@ const query = new URLSearchParams('?a=1&b=2&b=3')
 query.getAll('b') // ['2', '3']
 ```
 
-**URLSearchParams.get(name)** 判断是否存在某个查询参数
+**URLSearchParams.has(name)** 判断是否存在某个查询参数
 ``` js
 const query = new URLSearchParams('?a=1&b=2')
 query.has('a') // true
