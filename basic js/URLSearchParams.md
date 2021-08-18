@@ -73,6 +73,8 @@ IE 不兼容，chrome 49+ 开始兼容。这有个 polyfill [url-search-params-p
 
 ![URLSearchParams-兼容](./imgs/URLSearchParams-兼容.jpg)
 
+[手写 URLSearchParams](https://github.com/ethanius/URLSearchParams/blob/master/urlsearchparams.js)
+
 ### refs
 - [张鑫旭 JS URL()和URLSearchParams() API接口详细介绍](https://www.zhangxinxu.com/wordpress/2019/08/js-url-urlsearchparams/)
 - [让URLSearchParams帮你生成和解析参数字符串](https://zhuanlan.zhihu.com/p/29581070?utm_source=com.daimajia.gold&utm_medium=social)
