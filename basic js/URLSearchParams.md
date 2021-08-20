@@ -69,7 +69,7 @@ query.has('a') // true
 ```
 
 ### 兼容性
-IE 不兼容，chrome 49+ 开始兼容。这有个 polyfill [url-search-params-polyfill](https://github.com/jerrybendy/url-search-params-polyfill/)
+IE 不兼容，chrome 49+ 开始兼容。这有 polyfill [url-search-params-polyfill](https://github.com/jerrybendy/url-search-params-polyfill/)、[url-search-params.js](https://github.com/WebReflection/url-search-params/blob/master/src/url-search-params.js)
 
 ![URLSearchParams-兼容](./imgs/URLSearchParams-兼容.jpg)
 
