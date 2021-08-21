@@ -1,66 +1,38 @@
-(function (ctx) {
-  function encode(str) {
-    try {
-      return encodeURIComponent(str)
-    } catch (e) {
-      return ''
-    }
-  }
-  
-  function decode(str) {
-    try {
-      return decodeURIComponent(str)
-    } catch (e) {
-      return ''
-    }
-  }
+document.cookie = 'a=1'
+document.cookie = 'b=2'
+document.cookie = 'c=3'
 
-  function type(target) {
-    return ({}).toString.call(target).slice(8, -1)
-  }
-  
-  var querystring = {
-    parse: function(string) {
-      string = string !== undefined ? string : window.location.search
-      if (type(string) !== 'String' || !string) {
-        return {}
-      }
-  
-      var obj = {}
-      string = decode(string)
-      string.replace(/([^&=]+)=([^&=]*)/g, (_, k, v) => {
-        obj.hasOwnProperty(k)
-          ? type(obj[k]) === 'Array'
-            ? obj[k].push(v) 
-            : obj[k] = [obj[k], v]
-          : obj[k] = v
-      })
-      return obj
-    },
-    stringify: function(obj) {
-      if (type(obj) !== 'Object') {
-        return ''
-      }
-  
-      var strs = []
-      for (var k in obj) {
-        if (obj.hasOwnProperty(k)) {
-          if (type(obj[k]) === 'Array') {
-            for (var i = 0; i < obj[k].length; ++i) {
-              strs.push(
-                encode(k) + '=' + encode(obj[k][i])
-              )
-            }
-          } else {
-            strs.push(
-              encode(k) + '=' + encode(obj[k])
-            )
-          }
-        }
-      }
-  
-      return strs.join('&')
-    }
-  }
-  ctx.querystring = querystring
-})(window);
+function replaceMany(replacedStr, rules, caseSensitive = true, globalMatch = true) {
+  if (typeof replacedStr !== 'string') throw new Error(`${replacedStr} is not a string!`)
+  if (typeof rules !== 'object') throw new Error(`${rules} is not a object!`)
+
+  let flags = ''
+  caseSensitive && (flags += 'i')
+  globalMatch && (flags += 'g')
+
+  return replacedStr.replace(
+    new RegExp(Object.keys(rules).join('|'), flags),
+    matched => rules[matched]
+  )
+}
+
+
+const replacedObj = {
+  ' ': '',
+  ';': '&'
+}
+console.log(
+  replaceMany(document.cookie, replacedObj)
+)
+
+const urlSearchParams = new URLSearchParams(
+  document.cookie.replace(
+    new RegExp(Object.keys(replacedObj).join('|'), 'g'), 
+    matched => replacedObj[matched]
+  )
+)
+console.log(
+  urlSearchParams.get('a'),
+  urlSearchParams.getAll('a'),
+  urlSearchParams.has('b'),
+)

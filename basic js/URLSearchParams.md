@@ -2,12 +2,12 @@
 [URLSearchParams](https://developer.mozilla.org/zh-CN/docs/Web/API/URLSearchParams) 是挂载在 window 下的原生构造方法（或者说是一个类）。用其生成的实例具有处理 url 查询字符串的能力。
 
 ### 日常作用
-- pasre： 解析一个字符串，找到其中的 key、value；
-- stringify：序列化数组或者对象字面量；
+- pasre： 解析一个字符串，找到其中的 key、value。作用对象：cookie、url；
+- stringify：序列化数组或者对象字面量，ajax 之前请求序列化参数；
 
 ### 用 URLSearchParams 创建对象
+可用字符串、数组、对象字面量作为参数：
 
-创建对象时传入 url 即可
 ``` js
 // 字符串形式
 const search = new URLSearchParams(location.search)
@@ -24,48 +24,54 @@ const paramsByObj = new URLSearchParams({
 ```
 
 ### URLSearchParams 实例方法
+方法名 | 作用
+-- | -- 
+append(name, key) | 添加新的查询参数
+delete(name) | 根据键名删除对应的查询字符串
+keys() | 返回查询参数的迭代对象
+values() | 返回查询参数值的迭代对象
+entries() | 返回查询参数对的迭代对象
+get(name) | 获取某个查询参数值，没找到则返回 **null**
+getAll(name) | 获取某个查询参数值列表
+has(name) | 判断是否存在某个查询参数
 
-**URLSearchParams.append(name, key)** 添加新的查询参数：
 ``` js
 const query = new URLSearchParams('?a=1&b=2')
 query.append('c', 3)
-query.toString() // a=1&b=2&c=3
-```
+query.toString()   // a=1&b=2&c=3
 
-**URLSearchParams.delete(name)** 根据键名删除对应的查询字符串：
-``` js
-const query = new URLSearchParams('?a=1&b=2')
 query.delete('b')
-query.toString() // a=1
-```
+query.toString()   // a=1&c=3
 
-**URLSearchParams.keys()** 返回查询参数的迭代对象；<br />
-**URLSearchParams.values()** 返回查询参数值的迭代对象；<br />
-**URLSearchParams.entries()** 返回查询参数对的迭代对象；<br />
-可迭代对象均可使用 for of 遍历：
-``` js
-const query = new URLSearchParams('?a=1&b=2')
 for (let [k, v] of query) {
   ...
 }
-```
 
-**URLSearchParams.get(name)** 获取某个查询参数值：
-``` js
-const query = new URLSearchParams('?a=1&b=2')
-query.get('a') // '1'
-```
+query.get('a')     // '1'
+query.get('b')     // null
+query.getAll('b')  // []
 
-**URLSearchParams.getAll(name)** 获取某个查询参数值列表
-``` js
-const query = new URLSearchParams('?a=1&b=2&b=3')
-query.getAll('b') // ['2', '3']
+query.has('a')     // true
 ```
-
-**URLSearchParams.has(name)** 判断是否存在某个查询参数
+### 操作 cookie
+判断是否存在某个 cookie，获取某个 cookie
 ``` js
-const query = new URLSearchParams('?a=1&b=2')
-query.has('a') // true
+document.cookie = 'a=1'
+document.cookie = 'b=2'
+document.cookie = 'c=3'
+
+// 把 document.cookie 内的空格、分号进行转换
+const replacedObj = {
+  ' ': '',
+  ';': '&'
+}
+const cookieChanged = document.cookie.replace(
+  new RegExp(Object.keys(replacedObj).join('|'), 'g'), 
+  matched => replacedObj[matched]
+)
+const urlSearchParams = new URLSearchParams(cookieChanged)
+urlSearchParams.has('a') // true
+urlSearchParams.get('a') // 1
 ```
 
 ### 兼容性
