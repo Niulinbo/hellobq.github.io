@@ -30,6 +30,16 @@ function replaceMultipleStrings(
     matched => rules[matched]
   )
 }
+
+// 举例
+document.cookie = 'a=1'
+document.cookie = 'b=2'
+document.cookie = 'c=3'
+const replacedObj = {
+  ' ': '',
+  ';': '&'
+}
+replaceMultipleStrings(document.cookie, replacedObj) // a=1&b=2&c=3
 ```
 
 refs: 
