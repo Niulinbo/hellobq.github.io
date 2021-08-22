@@ -51,7 +51,7 @@ replace | 跳转到指定 url，并从历史访问记录中删除当前页面 ur
 assign | 跳转到指定 url，不会从历史访问记录中删除当前页面 url
 toString | 返回编码后（encodeURIComponent）的 URL 字符串，和 window.location.href 相等
 
-注意： 跳转到指定 url，如果要保存当前页面的历史浏览记录，则使用 assign 、给 href 属性赋值、直接给 window.location 赋值，否则使用 replace。
+注意： 跳转到指定 url，如果要保存当前页面的历史浏览记录，则使用 assign 、给 href 属性赋值、直接给 window.location 赋值（三种），否则使用 replace。
 
 ### assign VS href
 尽管 assign 和 href 作用是一样的，但它们之间也有细微的差别：
@@ -59,6 +59,7 @@ toString | 返回编码后（encodeURIComponent）的 URL 字符串，和 window
 - assign 方法让更方便写 Jest 测试用例；
 
 ### refs
+- [MDN location](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/location)
+- [W3C dom-location](https://html.spec.whatwg.org/multipage/history.html#dom-location)
 - [JavaScript 中的 window.location 和 document.location 有什么区别？](https://stackoverflow.com/questions/2430936/whats-the-difference-between-window-location-and-document-location-in-javascrip)
 - [location.href 属性与 location.assign() 方法](https://stackoverflow.com/questions/10302905/location-href-property-vs-location-assign-method)
-- [W3C dom-location](https://html.spec.whatwg.org/multipage/history.html#dom-location)
