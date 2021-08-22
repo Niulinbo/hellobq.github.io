@@ -58,6 +58,15 @@ toString | 返回编码后（encodeURIComponent）的 URL 字符串，和 window
 - 执行速度上，直接修改 href 属性更快；
 - assign 方法让更方便写 Jest 测试用例；
 
+### window.location VS window.open
+跳转到指定 url，window.location 和 window.open 是有差异的：
+- window.location 只能在本窗口跳转，window.open 可以开辟新的窗口（第二个参数不是 _self）；
+- 若在本窗口跳转，非用户交互的 window.open 可能被拦截（比如在 Firefox/Safari 浏览器里执行。因为浏览器会判断该跳转可能是广告，而非用户交互造成的结果，比如点击），而使用 window.location 不会被拦截；
+
+所以：
+- 本窗口跳转：使用 window.location
+- 跳转到新窗口：用户点击触发的 window.open
+
 ### refs
 - [MDN location](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/location)
 - [W3C dom-location](https://html.spec.whatwg.org/multipage/history.html#dom-location)
