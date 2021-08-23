@@ -44,7 +44,7 @@ history.forward() 前往下一个浏览记录，等同于 history.go(1)。
 跳转到其他页面。比如某个标签页的浏览记录是 a.html -> b.html -> c.html -> d.html，且此时 url 是 c.html：
 - history.go(2) 此时页面不跳转。
 - history.go(1) 此时 url 是 d.html。
-- history.go(0) 刷新页面！。
+- history.go(0) **刷新页面**，注意这是刷新当前页面的一种方法！
 - history.go(-1) 此时 url 是 b.html。
 - history.go(-2) 此时 url 是 a.html。
 
@@ -59,7 +59,7 @@ history.forward() 前往下一个浏览记录，等同于 history.go(1)。
 ### pushState VS replaceState
 - 同：<br />
   1. 都更改了历史记录（修改了 url，增加了状态值）；
-  2. 虽然会更改 url, 但不会发送请求，不会刷新页面！
+  2. 虽然会更改 url，但不会发送请求，不会刷新页面！
   3. 至少传递两个参数！
 - 异：<br />
   pushState 是新增记录；replaceState 则是替换当前记录；
