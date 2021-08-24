@@ -10,12 +10,97 @@
 </head>
 
 <body>
-  <div class="wrap">
+  <!-- <div class="wrap">
     <div id="middle">middle</div>
     <div id="left">left</div>
     <div id="right">right</div>
-  </div>
-  <script src="./index.js"></script>
+  </div> -->
+  <ul>
+    <li><a href='/home'>home</a></li>
+    <li><a href='/about'>about</a></li>
+    <div id="routeView"></div>
+  </ul>
+
+
+  <!-- <script src="./index.js"></script> -->
+  <script>
+    // location.hash = '#1'
+    // setTimeout(() => location.hash = '#2', 1000)
+    // setTimeout(() => location.hash = '#3', 2000)
+    // window.onpopstate = function() {
+    //   console.log(history.state)
+    // }
+
+    // setTimeout(() => {
+    //   history.pushState({ page: 1 }, 'title 1', '/1')
+    //   setTimeout(() => history.pushState({ page: 2 }, 'title 2', '/2'), 1000)
+    //   setTimeout(() => history.pushState({ page: 3 }, 'title 3', '/3'), 2000)
+    // }, 1000)
+
+    window.addEventListener('DOMContentLoaded', onLoad)
+
+    // window.addEventListener('popstate', () => {
+    //   console.log('popstate ....')
+    //   changeView()
+    // })
+    window.addEventListener('hashchange', () => {
+      console.log('popstate ....')
+      changeView()
+    })
+
+    let routeView = ''
+
+    function onLoad() {
+
+      routeView = document.getElementById('routeView')
+
+      changeView()
+
+      let event = document.getElementsByTagName('ul')[0]
+
+      event.addEventListener('click', (e) => {
+
+        if (e.target.nodeName === 'A') {
+          e.preventDefault()
+
+          window.location.hash = e.target.getAttribute('href')
+          // history.pushState(null, "", e.target.getAttribute('href'))
+
+          changeView()
+        }
+
+      })
+    }
+
+    function changeView() {
+      switch (location.hash) {
+        case '#/home':
+          routeView.innerHTML = 'home'
+          break;
+        case '#/about':
+          routeView.innerHTML = 'about'
+          break;
+        default:
+          routeView.innerHTML = ''
+      }
+
+    }
+
+    // function changeView() {
+    //   switch (location.pathname) {
+    //     case '/home':
+    //       routeView.innerHTML = 'home'
+    //       break;
+    //     case '/about':
+    //       routeView.innerHTML = 'about'
+    //       break;
+    //     default:
+    //       routeView.innerHTML = ''
+    //   }
+
+    // }
+
+  </script>
 </body>
 
 </html>

@@ -63,3 +63,18 @@ history.forward() 前往下一个浏览记录，等同于 history.go(1)。
   3. 至少传递两个参数！
 - 异：<br />
   pushState 是新增记录；replaceState 则是替换当前记录；
+
+### onpopstate 事件
+在做出浏览器动作时，会触发该事件，比如用户手动点击了 “前进”、“回退” 按钮，或者用 js 调用了 back/forward/go 方法。所以可以通过监听 popstate 事件来判断当前标签页的浏览记录是否在变换。
+
+**注意**：pushState、replaceState 在修改历史记录时，不会触发 popstate。
+
+拦截举例：a.html -> b.html，当用户点击回退时，返回 c.html 而不是 a.html
+``` js
+;(function() {
+  window.onpopstate = function() {
+    history.replaceState(null, '', 'c.html')
+  }
+  history.pushState(null, '', 'b.html')
+})()
+```
