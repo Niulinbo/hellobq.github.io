@@ -6,7 +6,7 @@
 ## hash-router
 hash 路由是前端路由的一种，也是 h5 history-router 出现之前的前端路由实现方式。
 
-原理/特点：当[修改 window.location.hash 时不会刷新页面](location.md#设置-windowlocation-下的属性值)，也不会向服务器请求任何资源，仅是前端监听 hash 地变更来匹配路由表规则。
+原理/特点：当[修改 window.location.hash 时不会刷新页面](location.md)，也不会向服务器请求任何资源，仅是前端监听 hash 地变更来匹配路由表规则。
 
 ### 举例
 ``` html
@@ -34,7 +34,7 @@ function onLoad() {
 }
 
 function changeView() {
-  switch (location.hash) {
+  switch (window.location.hash) {
     case '#/home':
       routeView.innerHTML = 'home'
       break;

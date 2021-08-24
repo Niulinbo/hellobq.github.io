@@ -39,14 +39,14 @@
 
     window.addEventListener('DOMContentLoaded', onLoad)
 
-    // window.addEventListener('popstate', () => {
-    //   console.log('popstate ....')
-    //   changeView()
-    // })
-    window.addEventListener('hashchange', () => {
+    window.addEventListener('popstate', () => {
       console.log('popstate ....')
       changeView()
     })
+    // window.addEventListener('hashchange', () => {
+    //   console.log('popstate ....')
+    //   changeView()
+    // })
 
     let routeView = ''
 
@@ -63,8 +63,8 @@
         if (e.target.nodeName === 'A') {
           e.preventDefault()
 
-          window.location.hash = e.target.getAttribute('href')
-          // history.pushState(null, "", e.target.getAttribute('href'))
+          // window.location.hash = e.target.getAttribute('href')
+          history.pushState(null, "", e.target.getAttribute('href'))
 
           changeView()
         }
@@ -73,11 +73,11 @@
     }
 
     function changeView() {
-      switch (location.hash) {
-        case '#/home':
+      switch (location.pathname) {
+        case '/home':
           routeView.innerHTML = 'home'
           break;
-        case '#/about':
+        case '/about':
           routeView.innerHTML = 'about'
           break;
         default:
