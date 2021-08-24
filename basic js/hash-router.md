@@ -52,3 +52,7 @@ window.addEventListener('DOMContentLoaded', onLoad)
 // 监听 hashchange 来更新视图
 window.addEventListener('hashchange', changeView)
 ```
+
+### refs
+- [[vue-router] hash模式与history模式的区别](https://juejin.cn/post/6844903841029160968)
+- [前端路由模式详解（hash和history）](https://juejin.cn/post/6861586972696444942)
