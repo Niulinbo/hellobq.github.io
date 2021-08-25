@@ -1,46 +1,36 @@
-document.cookie = 'a=1'
-document.cookie = 'b=2'
-document.cookie = 'c=3'
 
-/**
- * 
- * @param {string} replacedStr 目标串
- * @param {object} rules 替换规则
- * @param {boolean} caseSensitive 是否区分大小写
- * @param {boolean} globalMatch 是否全部替换
- * @returns string 替换后的串
- */
-function replaceMany(replacedStr, rules, caseSensitive = true, globalMatch = true) {
-  if (typeof replacedStr !== 'string') throw new Error(`${replacedStr} is not a string!`)
-  if (typeof rules !== 'object') throw new Error(`${rules} is not a object!`)
+window.addEventListener('DOMContentLoaded', onLoad)
+window.addEventListener('popstate', () => {
+  console.log('popstate ....')
+  changeView()
+})
 
-  let flags = ''
-  caseSensitive && (flags += 'i')
-  globalMatch && (flags += 'g')
+let routeView = ''
+function onLoad() {
+  routeView = document.getElementById('routeView')
+  changeView()
+  let event = document.getElementsByTagName('ul')[0]
+  event.addEventListener('click', (e) => {
+    if (e.target.nodeName === 'A') {
+      e.preventDefault()
 
-  return replacedStr.replace(
-    new RegExp(Object.keys(rules).join('|'), flags),
-    matched => rules[matched]
-  )
+      // window.location.hash = e.target.getAttribute('href')
+      history.pushState(null, "", e.target.getAttribute('href'))
+
+      changeView()
+    }
+  })
 }
 
-
-const replacedObj = {
-  ' ': '',
-  ';': '&'
+function changeView() {
+  switch (location.pathname) {
+    case '/home':
+      routeView.innerHTML = 'home'
+      break;
+    case '/about':
+      routeView.innerHTML = 'about'
+      break;
+    default:
+      routeView.innerHTML = ''
+  }
 }
-console.log(
-  replaceMany(document.cookie, replacedObj)
-)
-
-const urlSearchParams = new URLSearchParams(
-  document.cookie.replace(
-    new RegExp(Object.keys(replacedObj).join('|'), 'g'), 
-    matched => replacedObj[matched]
-  )
-)
-console.log(
-  urlSearchParams.get('a'),
-  urlSearchParams.getAll('a'),
-  urlSearchParams.has('b'),
-)
