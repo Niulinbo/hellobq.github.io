@@ -10,47 +10,13 @@
 </head>
 
 <body>
-  <!-- <div class="wrap">
-    <div id="middle">middle</div>
-    <div id="left">left</div>
-    <div id="right">right</div>
-  </div> -->
-  <ul>
-    <li><a href='/home'>home</a></li>
-    <li><a href='/about'>about</a></li>
-    <div id="routeView"></div>
-    <img src="https://lupic.cdn.bcebos.com/20191203/3018282960_14.jpg" alt="">
-  </ul>
-  <!-- <script src="./index.js"></script>
-  <script src="./index1.js"></script> -->
-
-  <script>
-
-    ;(function (console) {
-      if (!console || console.time1) return
-
-      var timer = {}
-      console.time1 = function(str) {
-        timer[str] = Date.now()
-      }
-
-      console.timeEnd1 = function(str) {
-        console.log(str + ': ' + (Date.now() - timer[str]) + 'ms')
-        delete timer[str]
-      }
-    })(window.console)
-
-    const arg = Function
-
-    console.time1(arg)
-    for (let i = 0; i < 100000000; ++i);
-    // console.timeEnd1(arg) 
-
-    console.log(
-      '%cenv: %cproduction',
-      'margin: 10px 0 10px 10px; padding: 4px; background: grey; font-size: 14px; border-radius: 2px 0 0 2px;',
-      'margin: 10px 0 10px 0px; padding: 4px; background: grey; font-size: 14px; border-radius: 0 2px 2px 0; color: #fff'
-    )
-  </script>
+  <section class="container">
+    <div class="left"></div>
+    <div class="right">
+      <div class="right-inner">
+        right-inner
+      </div>
+    </div>
+  </section>
 </body>
 </html>
