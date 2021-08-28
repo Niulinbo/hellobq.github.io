@@ -149,6 +149,10 @@ new Fn()  // Fn 实例对象
 
 还有其他的规则限制：八进制数字处理、eval 等。
 
+### 严格模式的缺点
+- 当使用匿名函数时，必须对其命名，否则不能递归调用。
+- 在使用一些老而旧的库时，使用严格模式可能会出现问题（因为这些库一开始没考虑到 `'use strict'` 的环境）。
+
 ### refs
 - [MDN 严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 - [JS 必须知道的基础《严格模式 'use strict'》](https://juejin.cn/post/6844904120214618120#heading-11)
