@@ -20,13 +20,22 @@
   </section>
 
   <script>
-    'use strict'
-    var a = 10
-  </script>
-  <script>
-    'use strict'
-    b = 10
-    console.log(a, b)
+    function getPhoneModel() {
+      const subInfo = window.navigator.userAgent.match(/\(.*?\)/g)[0].split('; ')
+
+      if (subInfo.length <= 2) return 'PC'
+      console.log(subInfo)
+      const mobileMap = new Map([
+        ['(Linux', `${subInfo[1]}    ${subInfo[2].split(' ')[0]}`],
+        ['(iPhone', `${subInfo[1]}    ${subInfo[1].split(' ')[3]}`]
+      ])
+
+      return mobileMap.get(subInfo[0]) || 'PC'
+    }
+    alert(
+      window.navigator.userAgent.match(/MicroMessenger/i)
+    )
   </script>
 </body>
+
 </html>
