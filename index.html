@@ -18,50 +18,12 @@
       </div>
     </div>
   </section>
-  <script>
-    var obj = {
-      a: 'a',
-      [Symbol('b')]: 'b'
-    }
-    Object.defineProperty(obj, 'c', { value: 'c', enumerable: false })
-
-    Object.assign(
-      obj.__proto__,
-      {
-        d: 'd',
-        [Symbol('e')]: 'e'
-      }
-    )
-    Object.defineProperty(obj.__proto__, 'f', { value: 'f', enumerable: false })
-    // console.log(obj)
-
-    /**
-     * 
-     * 此时的 obj: {a: "a", c: "c", Symbol(b): "b"}，其中 c 不可被枚举
-     * 此时的 obj 原型：{d: 'd', Symbol(e): 'e', f: 'f', ...}，其中 f 不可被枚举
-     * */
-
-    // obj 及其原型上可枚举的非 symbol 属性
-    for (let k in obj) {
-      // console.log(k) // 'a', 'd'
-      if (obj.hasOwnProperty(k)) {
-        console.log(k)
-      }
-    }
-    console.log(
-      // obj 本身可枚举的非 symbol 属性
-      Object.keys(obj), // ['a']
-
-      // obj 本身非 symbol 属性
-      Object.getOwnPropertyNames(obj), // ['a', 'c']
-
-      // obj 本身的 symbol 属性
-      Object.getOwnPropertySymbols(obj), // [Symbol(b)]
-
-      // obj 本身的所有属性，包括不可枚举的和 symbol
-      Reflect.ownKeys(obj) // ['a', 'c', Symbol(b)]
-    )
-  </script>
+  <iframe
+    src="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options"
+    width="800"
+    height="800"
+    frameborder="0"
+  ></iframe>
 </body>
 
 </html>
