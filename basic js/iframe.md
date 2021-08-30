@@ -44,3 +44,8 @@ frameborder | 设置 iframe 边框
 - X-Frame-Options: allow-from https://example.com/ <br />
   表示该页面可以在指定来源的 frame 中展示。
 
+
+### refs
+- [MDN iframe](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe)
+- [3 Reasons You Might Not Want To Use Iframes](https://www.ostraining.com/blog/webdesign/against-using-iframes/)
+- [MDN X-Frame-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
