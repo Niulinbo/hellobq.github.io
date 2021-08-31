@@ -19,11 +19,38 @@
     </div>
   </section>
   <iframe
-    src="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options"
-    width="800"
-    height="800"
-    frameborder="0"
+    id="aIframe"
+    src="http://localhost:51198/a.html"
+    onload="loadA()"
+  ></iframe>
+  <iframe
+    id="bIframe"
+    src="http://localhost:5000/b.html"
+    onload="loadB()"
   ></iframe>
 </body>
 
+<script>
+  function fn() {
+    console.log('this is index!')
+  }
+  function loadA() {
+    const aIframe = document.getElementById('aIframe')
+
+    // console.log(
+    //   aIframe.contentWindow,
+    //   aIframe.contentDocument
+    // )
+    // aIframe.contentWindow.fnA()
+  }
+  function loadB() {
+    const bIframe = document.getElementById('bIframe')
+    console.log(
+      bIframe.contentWindow,
+      bIframe.contentDocument,
+    )
+    bIframe.contentWindow.fnB()
+  }
+  
+</script>
 </html>
