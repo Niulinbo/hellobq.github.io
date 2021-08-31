@@ -44,7 +44,7 @@ frameborder | 设置 iframe 边框
 - X-Frame-Options: allow-from https://example.com/ <br />
   表示该页面可以在指定来源的 frame 中展示。
 
-### 同域 iframe 通讯
+### 同源 iframe 通讯
 直接使用 `contentWindow` 获取 iframe 内的上下文，使用 `window.parent` 获取父页面上下文；
 
 > 注意要等 iframe load 之后，才能调用 iframe 内的方法！
@@ -82,7 +82,7 @@ this is b page!
 </script>
 ```
 
-### 跨域 iframe 通讯
+### 跨源 iframe 通讯
 使用 [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage) 这个 h5 API。
 
 ### refs
