@@ -10,9 +10,9 @@
   this is b page!
 
   <script>
-    console.log(window.parent.fn())
-    function fnB() {
-      console.log('this is b page!')
+    window.addEventListener('message', receiveMessage, false)
+    function receiveMessage(e) {
+      console.log(e)
     }
   </script>
 </body>

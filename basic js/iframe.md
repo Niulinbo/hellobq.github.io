@@ -85,7 +85,62 @@ this is b page!
 ### 跨源 iframe 通讯
 使用 [window.postMessage](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage) 这个 h5 API。
 
+``` js
+// otherWindow 是 iframe 的 contentWindow 属性或者 window.open 的返回值
+otherWindow.postMessage(message, targetOrigin, [transfer])
+```
+
+``` html
+<!-- http://localhost:5000/index.html -->
+
+<body>
+  <span>this is index page</span>
+  <iframe 
+    id="aIframe" 
+    src="http://localhost:52883/a.html" 
+    onload="loadA()"
+  ></iframe>
+</body>
+
+<script>
+  // 接受来自 http://localhost:52883 域名下子页面 a.html 的数据
+  window.addEventListener('message', receiveMessage, false)
+  function receiveMessage(e) {
+    const { origin, data } = e
+    if (origin === 'http://localhost:52883') {
+      document.querySelector('span').innerText = data
+    }
+  }
+
+  // 等 a.html 加载完成后，向其发送数据
+  function loadA() {
+    const aIframe = document.getElementById('aIframe')
+    aIframe.contentWindow.postMessage('I am index page!', 'http://localhost:52883')
+  }
+</script>
+```
+
+``` html
+<!-- http://localhost:52883/a.html -->
+
+<span>this is a page!</span>
+<script>
+  // 监听来自父页面的 message
+  window.addEventListener('message', receiveMessage, false)
+  function receiveMessage(e) {
+    const { origin, data } = e
+    if (origin === 'http://localhost:5000') {
+      document.querySelector('span').innerText = data
+    }
+  }
+
+  // 父页面发送数据（这里使用 window.parent 访问父页面！）
+  window.parent.postMessage('has receive msg!', 'http://localhost:5000')
+</script>
+```
+
 ### refs
 - [MDN iframe](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/iframe)
 - [3 Reasons You Might Not Want To Use Iframes](https://www.ostraining.com/blog/webdesign/against-using-iframes/)
 - [MDN X-Frame-Options](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
+- [使用postMessage进行Iframe跨域通信](https://greenfavo.github.io/blog/docs/05.html)

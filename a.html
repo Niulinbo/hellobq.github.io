@@ -7,12 +7,22 @@
   <title>Document</title>
 </head>
 <body>
-  this is a page!
 
+  <span>this is a page!</span>
   <script>
-    function fnA() {
-      console.log(this)
+    window.addEventListener('message', receiveMessage, false)
+    function receiveMessage(e) {
+      const { origin, data } = e
+      if (origin === 'http://localhost:5000') {
+        document.querySelector('span').innerText = data
+      }
     }
+
+    window.parent.postMessage(
+      'has receive msg!',
+      'http://localhost:5000'
+    )
   </script>
+
 </body>
 </html>

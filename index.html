@@ -10,47 +10,32 @@
 </head>
 
 <body>
-  <section class="container">
-    <div class="left"></div>
-    <div class="right">
-      <div class="right-inner">
-        right-inner
-      </div>
-    </div>
-  </section>
-  <iframe
-    id="aIframe"
-    src="http://localhost:51198/a.html"
-    onload="loadA()"
-  ></iframe>
-  <iframe
-    id="bIframe"
-    src="http://localhost:5000/b.html"
-    onload="loadB()"
-  ></iframe>
+  <span>this is index page</span>
+  <iframe id="aIframe" src="http://localhost:52883/a.html" onload="loadA()"></iframe>
 </body>
 
 <script>
+
+  window.addEventListener('message', receiveMessage, false)
+  function receiveMessage(e) {
+    console.log(e)
+    const { origin, data } = e
+    if (origin === 'http://localhost:52883') {
+      document.querySelector('span').innerText = data
+    }
+  }
+
   function fn() {
     console.log('this is index!')
   }
   function loadA() {
     const aIframe = document.getElementById('aIframe')
-
-    // console.log(
-    //   aIframe.contentWindow,
-    //   aIframe.contentDocument
-    // )
-    // aIframe.contentWindow.fnA()
-  }
-  function loadB() {
-    const bIframe = document.getElementById('bIframe')
-    console.log(
-      bIframe.contentWindow,
-      bIframe.contentDocument,
+    aIframe.contentWindow.postMessage(
+      'I am index page!',
+      'http://localhost:52883'
     )
-    bIframe.contentWindow.fnB()
   }
-  
+
 </script>
+
 </html>
