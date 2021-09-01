@@ -11,16 +11,17 @@
 
 <body>
   <span>this is index page</span>
-  <iframe id="aIframe" src="http://localhost:52883/a.html" onload="loadA()"></iframe>
+  <iframe id="aIframe" src="http://localhost:51221/a.html" onload="loadA()"></iframe>
 </body>
 
 <script>
 
+  console.log(window.parent === window)
   window.addEventListener('message', receiveMessage, false)
   function receiveMessage(e) {
     console.log(e)
     const { origin, data } = e
-    if (origin === 'http://localhost:52883') {
+    if (origin === 'http://localhost:51221') {
       document.querySelector('span').innerText = data
     }
   }
@@ -32,7 +33,7 @@
     const aIframe = document.getElementById('aIframe')
     aIframe.contentWindow.postMessage(
       'I am index page!',
-      'http://localhost:52883'
+      'http://localhost:51221'
     )
   }
 

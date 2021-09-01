@@ -10,6 +10,7 @@
 
   <span>this is a page!</span>
   <script>
+    console.log(window.parent === window)
     window.addEventListener('message', receiveMessage, false)
     function receiveMessage(e) {
       const { origin, data } = e

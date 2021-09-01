@@ -20,6 +20,15 @@ frameborder | 设置 iframe 边框
 
 其中 `src` 可以动态添加或者变化，来加载不同的 html 页面；width/height/border 也可以通过 css 样式表来设置。
 
+### 检测当前页面是否以 iframe 的方式作为子页面
+原理：`window.parent` 默认返回当前窗口的父窗口对象，如果一个窗口没有父窗口,则它的 parent 属性为自身的引用.
+
+``` js
+console.log(
+  window.parent === window
+)
+```
+
 ### iframe 的优缺点
 
 优点：
