@@ -19,12 +19,13 @@
   // }
   // fn(1, 2)
 
-  let a = 1, b = 2, tmp
-
-  tmp = a
-  a = b
-  b = tmp
-  console.log(a, b)
+  const map = new Map([
+    ['tianjing', '天津'],
+    [1, '1']
+  ])
+  for (let [k, v] of map.entries()) {
+    console.log(k, v)
+  }
 </script>
 
 </html>
