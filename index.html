@@ -14,18 +14,10 @@
 </body>
 
 <script>
-  // function fn(a, b, c = 1, d) {
-  //   console.log(fn.length, arguments.length)
-  // }
-  // fn(1, 2)
-
-  const map = new Map([
-    ['tianjing', '天津'],
-    [1, '1']
-  ])
-  for (let [k, v] of map.entries()) {
-    console.log(k, v)
-  }
+  const obj = {}, n = 1, str = 'str'
+console.log(                   // [object Object] 1 str
+  `${obj} ${n} ` + str
+)
 </script>
 
 </html>
