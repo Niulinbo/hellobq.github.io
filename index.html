@@ -14,10 +14,25 @@
 </body>
 
 <script>
-  const obj = {}, n = 1, str = 'str'
-console.log(                   // [object Object] 1 str
-  `${obj} ${n} ` + str
-)
+  fetch(
+    'http://127.0.0.1:7001', 
+    {
+      method: 'POST',
+      // credentials: 'include',
+      headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: 'patch msg'
+      })
+    }
+  )
+    .then(res => {
+      // console.log(res.headers, res.headers.get('X-Version'), res.headers.get('cookie'))
+      return res.json()
+    })
+    .then(console.log)
 </script>
 
 </html>
