@@ -93,6 +93,10 @@ async index() {          // 这是真正的 post 请求
 ### 发起请求时，携带 cookie
 
 ### refs
+- [MDN 跨源资源共享（CORS）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
+- [CORS 完全手册之 CORS 详解](https://mp.weixin.qq.com/s/Cqay4VvYDjADbT_b97xW2w)
 - [nodejs.ForbiddenError: invalid csrf token,egg中post失败解决方案](https://blog.csdn.net/wron_path/article/details/112425731)
+- [Egg.js (五) 发送POST请求和获取参数](https://blog.csdn.net/zhuming3834/article/details/107553855)
+- [MDN fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [Chrome不显示OPTIONS请求的解决方法2021版chrome90](https://blog.csdn.net/letterTiger/article/details/119024009)
 
