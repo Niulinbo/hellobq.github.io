@@ -1,13 +1,13 @@
 ## CORS
-`cross origin resource sharing` 跨域资源共享，允许跨源资源共享得以安全进行。
+`Cross Origin Resource Sharing` 跨域资源共享，允许跨源资源共享得以安全进行。
 
 什么情况下需要 CORS：
-- Xhr/fetch 发起的跨站点 http 请求；
+- xhr/fetch 发起的跨站点 http 请求；
 - 使用 `drawImage` 将 images/video 绘制的 canvas；
-- CSS 中通过 `@font-face` 使用跨源字体资源
+- CSS 中通过 `@font-face` 使用跨源字体资源；
 
 ### CORS 涉及到的 response headers
-- `Access-Control-Allow-Origin`: 允许哪些站点的请求。无论是否是 `简单请求`，都要设置之。
+- `Access-Control-Allow-Origin`: 允许哪些站点的请求。无论是否是 **简单请求**，都要设置之。
 - `Access-Control-Allow-Headers`: 允许请求头设置一些自定义请求头，或者某些请求头的值不符合 CORS 要求的枚举值。
 - `Access-Control-Allow-Methods`: 允许除开（GET、POST、HEAD）请求方法。
 - `Access-Control-Allow-Expose-Headers`: 允许客户端获取到自定义响应头。
@@ -15,7 +15,7 @@
 
 ### 简单请求与复杂请求
 - 请求方法仅限于：`GET`、`POST`、`HEAD`
-- 允许人为设置的集合：`Accept`、`Accept-Language`、`Content-Language`、`Content-Type`。`Content-Type` 的值仅限：
+- 允许人为设置的集合：`Accept`、`Accept-Language`、`Content-Language`、`Content-Type`。其中 `Content-Type` 的值仅限：
   - `text/plain`
   - `multipart/form-data`
   - `application/x-www-form-urlencoded`
@@ -41,9 +41,7 @@ async index() {
 ```
 
 ### 预请求
-CORS 每次进行 **复杂请求** 之前，默认都会先发出预请求。
-
-预请求的目的是让浏览器向服务器确认一些信息：
+CORS 每次进行 **复杂请求** 之前，默认都会先发出预请求，目的是让浏览器向服务器确认一些信息：
 - 当前网页所处的源（protocol + domain + port）是否在服务器的白名单内。
 - 可以使用哪些 HTTP 方法和请求头。
 - 是否可携带 cookie。
@@ -67,14 +65,14 @@ fetch(
 .then(res => res.json())
 .then(console.log)
 
-async indexOpt() {       //  这是真正的 post 请求
+async indexOpt() {       //  这是 options 预请求 
   const { ctx } = this;
   ctx.set('Access-Control-Allow-Origin', '*')
   ctx.set('Access-Control-Allow-Headers', 'Content-Type')
   ctx.status = 200
   ctx.body = 'ok'
 }
-async index() {          // 这是 options 预请求
+async index() {          // 这是真正的 post 请求
   const { ctx } = this
   ctx.set('Access-Control-Allow-Origin', '*')
   ctx.body = ctx.body, ctx.request.body
@@ -86,7 +84,7 @@ async index() {          // 这是 options 预请求
 
 ![CORS-预请求2.jpg](imgs/CORS-预请求2.jpg)
 
-> chrome 90 之前展示跨域请求的方法：在 chrome 地址栏总输入 chrome://flags/#out-of-blink-cors，将其设置为 Disabled 后重启浏览器
+> chrome 90 之前展示预请求的方法：在 chrome 地址栏总输入 chrome://flags/#out-of-blink-cors，将其设置为 Disabled 后重启浏览器
 
 ### 设置自定义请求头
 
