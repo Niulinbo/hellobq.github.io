@@ -18,10 +18,10 @@
     'http://127.0.0.1:7001', 
     {
       method: 'POST',
-      // credentials: 'include',
+      credentials: 'include',
       headers: { 
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Token: 'token'
       },
       body: JSON.stringify({
         name: 'patch msg'
@@ -29,7 +29,10 @@
     }
   )
     .then(res => {
-      // console.log(res.headers, res.headers.get('X-Version'), res.headers.get('cookie'))
+      console.log(res.headers, res.headers.get('X-Version'), res.headers.get('Date'),
+        res.headers.get('content-type'),
+        res.headers.get('Access-Control-Allow-Origin'),
+      )
       return res.json()
     })
     .then(console.log)
