@@ -10,9 +10,9 @@
   this is b page!
 
   <script>
-    window.addEventListener('message', receiveMessage, false)
-    function receiveMessage(e) {
-      console.log(e)
+    const bc = new BroadcastChannel('test channel')
+    bc.onmessage = function (e) {
+      console.log(e.data)
     }
   </script>
 </body>
