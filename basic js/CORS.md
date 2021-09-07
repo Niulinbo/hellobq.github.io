@@ -199,9 +199,21 @@ async indexOpt() {
 - `Access-Control-Max-Age` 并不是为一下所有的请求都设置缓存，而是经过其处理的请求，才有 CORS 缓存。
 - 若浏览器的控制台勾选了 `Disable cache`，则本地不缓存，每次请求都发预请求。
 
+### CORS 优缺点
+优点：
+- 能完成跨源 ajax 地请求。
+- 请求来源可控，能直接追溯（Origin 字段）。
+- 前端代码量极少，几乎都在后台配置。
+- 不需要中间服务器。
+
+缺点：
+- 要处理 `OPTIONS` 请求。
+- 要写不少响应头信息。
+
 ### refs
 - [MDN 跨源资源共享（CORS）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
 - [CORS 完全手册之 CORS 详解](https://mp.weixin.qq.com/s/Cqay4VvYDjADbT_b97xW2w)
+- [浅析跨域资源共享（CORS）及其安全性](https://www.nsfocus.com.cn/upload/contents/2015/03/o_19fenkhba1u155b617pcun216q4b.pdf)
 - [nodejs.ForbiddenError: invalid csrf token,egg中post失败解决方案](https://blog.csdn.net/wron_path/article/details/112425731)
 - [Egg.js (五) 发送POST请求和获取参数](https://blog.csdn.net/zhuming3834/article/details/107553855)
 - [MDN fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
